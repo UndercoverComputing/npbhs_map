@@ -1,0 +1,70 @@
+/*Mobile Interface w/ Touch Device Detection*/
+
+@media (hover:none), (hover:on-demand) {
+  .header a.logo {
+    color: white;
+    background-color: #4a80f5;
+    font-size: 4vh;
+    text-align: center;
+  }
+  .header a {
+    float: left;
+    text-align: center;
+    padding-left: 0.2em;
+    padding-right: 0.2em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    text-decoration: none;
+    font-size: 1em;
+    line-height: 1.6em;
+    border-radius: .25em;
+    background-color: white;
+    color: gray;
+    margin-right: 1em;
+    vertical-align: middle;
+  }
+  div.quick-select {
+    display: none;
+  }
+  div.quick-select-mobile {
+    display: inline-block;
+    padding: 0.5em .1em;
+    background-color: #4a80f5;
+    bottom: 0;
+    position: fixed;
+    width: 100%;
+  }
+  div.quick-select-mobile a{
+    display: block;
+    float: left;
+    text-align: justify;
+    padding-left: 0.3em;
+    padding-right: 0.3em;
+    padding-top: 0.4em;
+    padding-bottom: 0.4em;
+    text-decoration: none;
+    font-size: 2.2vh;
+    line-height: 4vh;
+    border-radius: .25em;
+    background-color: white;
+    color: gray;
+    margin: 0.15em;
+    vertical-align: middle;
+  }
+  .quick-select-mobile > a.tag-quick-select {
+    margin-top: 0.3em;
+    color: white;
+    background-color: #4a80f5;
+    font-size: 2vh;
+    font-family: 'Rubik', sans-serif;
+    font-weight: bold;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0.15em;
+    padding-right: 0.15em;
+  }
+  i.material-icons.quick-select {
+    vertical-align:middle;
+    font-size: 140%;
+  }
+}

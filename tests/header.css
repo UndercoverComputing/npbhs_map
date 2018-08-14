@@ -17,7 +17,7 @@ img{
   object-fit: fill;
 }
 
-/*Non Default large interface*/
+/* large interface*/
 
 @media screen and (min-width: 851px) {
   .header {
@@ -27,6 +27,7 @@ img{
     overflow: hidden;
     background-color: #4a80f5;
     padding: 1em .5em;
+    bbox-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
   }
   .header a {
     float: left;
@@ -88,6 +89,7 @@ img{
     padding: 0 .5em .5em;
     height: auto;
     background-color: #4a80f5;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
   }
   .header a {
     float: none;
@@ -145,7 +147,7 @@ img{
     color: white;
     background-color: #4a80f5;
     font-size: 4vh;
-    padding: ;
+    text-align: center;
   }
   .header a {
     float: left;

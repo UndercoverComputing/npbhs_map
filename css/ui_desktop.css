@@ -1,0 +1,61 @@
+/* large Desktop interface*/
+
+@media screen and (min-width: 851px) {
+  .header {
+    width: 100%;
+    height: 5em;
+    position: fixed;
+    overflow: hidden;
+    background-color: #4a80f5;
+    padding: 1em .5em;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  }
+  .header a {
+    float: left;
+    text-align: center;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    text-decoration: none;
+    font-size: 1em;
+    line-height: 1.6em;
+    border-radius: .25em;
+    background-color: white;
+    color: gray;
+    margin-right: 1em;
+    vertical-align: middle;
+  }
+  .header a.logo {
+    color: white;
+    background-color: #4a80f5;
+    font-size: 1.6em;
+    font-weight: bold;
+    padding-top: 0.1%;
+    padding-bottom: 0.1%;
+  }
+  .header a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  .quick-select {
+    float: right;
+  }
+  a.tag-quick-select {
+    color: white;
+    background-color: #4a80f5;
+    font-family: 'Rubik', sans-serif;
+    font-weight: bold;
+  }
+  i.material-icons.quick-select {
+    padding-left: 0.2em;
+    vertical-align: text-bottom;
+  }
+  i.material-icons.logo {
+    vertical-align: text-bottom;
+    font-size: 1.2em;
+  }
+  .quick-select-mobile {
+    display: none;
+  }
+}

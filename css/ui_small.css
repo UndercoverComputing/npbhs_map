@@ -1,0 +1,58 @@
+@media screen and (max-width: 850px) {
+  .header {
+    width: 100%;
+    position: fixed;
+    display: inline-block;
+    padding: 0 .5em .5em;
+    height: auto;
+    background-color: #4a80f5;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.12);
+  }
+  .header a {
+    float: none;
+    display: inline-block;
+    text-align: left;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    text-decoration: none;
+    font-size: 1em;
+    line-height: 1.6em;
+    border-radius: .25em;
+    background-color: white;
+    color: gray;
+    margin-right: 0.5em;
+    margin-top: .25em;
+    vertical-align: middle;
+  }
+  .quick-select {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    text-align: center;
+  }
+  .header a.logo {
+    vertical-align: bottom;
+    color: white;
+    background-color: #4a80f5;
+    font-size: 1.7em;
+    font-weight: bold;
+    padding-top: 0.1%;
+    padding-bottom: 0.1%;
+    margin-top: 0.25em;
+  }
+  .quick-select-mobile {
+    display: none;
+  }
+  i.material-icons.quick-select {
+    padding-left: 0.2em;
+    vertical-align: text-bottom;
+  }
+  a.tag-quick-select {
+    color: white;
+    background-color: #4a80f5;
+    font-family: 'Rubik', sans-serif;
+    font-weight: normal;
+  }
+}
