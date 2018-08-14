@@ -1,5 +1,6 @@
 /*Index Css contains links to other Css files without clogging the main HTML file*/
 @import url('https://fonts.googleapis.com/css?family=Rubik');
+@import url('https://fonts.googleapis.com/css?family=Roboto');
 @import url('map_settings.css');
 @import url('ui_mobile.css');
 @import url('ui_small.css');
@@ -7,6 +8,7 @@
 
 * {
   box-sizing: border-box;
+  margin: 0;
 }
 
 body {

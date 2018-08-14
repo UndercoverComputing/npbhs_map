@@ -1,21 +1,21 @@
-#content > div#floor1 {
-	border: 1px solid black;
-  height: 400px;
-	width: 500px;
+#content {
+	box-sizing: border-box;
+	width: 100%;
+	height: 100vh;
+  position:relative;
+  overflow: hidden;
+	z-index: -100;
 }
 
-div#npbhs_map {
-  display: inline-block;
-  height: 400px;
-	width: 500px;
+#myMaps {
+    position: relative;
+	height:auto;
+	width: auto;
 	background-color: #BBDAA4;
-  overflow: hidden;
-  z-index: -1;
+    overflow: hidden;
 }
-#npbhs_map div {
-  display: inline-block;
-	height: 400px;
-	width: 500px;
+#myMaps div {
+	margin: auto auto;
 }
 #controls {
 	background-color: lightGrey;
