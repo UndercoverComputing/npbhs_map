@@ -1,3 +1,3 @@
 # npbhs_map
 
-Progress: 30%
+Progress: 40%
