@@ -919,7 +919,7 @@
 
 			el.panzoom({
 				minScale: 1.0,
-                maxScale:5.0,
+        maxScale:10.0,
 				contain: 'invert',
 				cursor: 'move'
 			});

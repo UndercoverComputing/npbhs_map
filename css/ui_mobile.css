@@ -1,10 +1,16 @@
 /*Mobile Interface w/ Touch Device Detection*/
 
 @media (hover:none), (hover:on-demand) {
+  .header{
+    width: 100%;
+    position: fixed;
+    padding: none;
+  }
+
   .header a.logo {
     color: white;
     background-color: #4a80f5;
-    font-size: 4vh;
+    font-size: 2em;
     text-align: center;
   }
   .header a {

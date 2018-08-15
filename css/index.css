@@ -6,16 +6,6 @@
 @import url('ui_small.css');
 @import url('ui_desktop.css');
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-}
-
-body {
-  margin: 0;
-  font-family: Roboto;
-}
-
  /*
 .content {
   background-color: #bbdaa4;

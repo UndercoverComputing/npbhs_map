@@ -77,7 +77,7 @@
 	function createResetOptions(opts) {
 		var options = { range: true, animate: true };
 		if (typeof opts === 'boolean') {
-			options.animate = opts;
+			/*options.animate = opts;*/
 		} else {
 			$.extend(options, opts);
 		}
