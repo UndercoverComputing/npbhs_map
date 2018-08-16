@@ -47,6 +47,7 @@ $(document).ready(function() {
     }
   });*/
 
+
   $('#myMaps').on('wayfinding:roomClicked', function(e, r) {
     $('#endSelect option[value="' + r.roomId + '"]').attr('selected', true);
   });

@@ -918,9 +918,9 @@
 		function initializePanZoom(el) {
 
 			el.panzoom({
-				minScale: 1.0,
-        maxScale:10.0,
-				contain: 'invert',
+				minScale: 1,
+        maxScale:10,
+				contain: false,
 				cursor: 'move'
 			});
 

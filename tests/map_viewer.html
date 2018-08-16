@@ -1,95 +1,99 @@
 <!doctype html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<title>Wayfinding</title>
-		<meta name="description" content="">
-		<meta name="viewport" content="width=device-width">
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-		<link rel="stylesheet" href="map_viewer.css">
-	</head>
-	<body>
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Wayfinding</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="map_viewer.css">
+</head>
+
+<body>
 	<div id="controls">
-				<label>Show</label>
-				<label for="beginSelect">Begin Route at</label>
-				<select id="beginSelect">
+		<label>Show</label>
+		<label for="beginSelect">Begin Route at</label>
+		<select id="beginSelect">
 					<option value="P11">P11</option>
 					<option value="Atest">T2</option>
 				</select>
-				<label for="endSelect">Show Route to</label>
-				<select id="endSelect">
+		<label for="endSelect">Show Route to</label>
+		<select id="endSelect">
 					<option></option>
 					<option disabled="true">West 1st</option>
 					<option value="P11">P11</option>
 					<option value="P12">P12</option>
 					<option value="Atest">T2</option>
 				</select>
-				<label for="accessible">Accessible</label>
-				<input id="accessible" type="checkbox" name="accessible" value="Accessible" />
-			</div>
-		<div id="content">
-			<div id="myMaps">
-			</div>
+		<label for="accessible">Accessible</label>
+		<input id="accessible" type="checkbox" name="accessible" value="Accessible" />
+	</div>
+	<div id="content">
+		<div id="myMaps">
 		</div>
+	</div>
 
 
-		<script src="jquery.wayfinding.js"></script>
-        <script src="jquery.panzoom.js"></script>
-		<script>
-			$(document).ready(function () {
-				'use strict';
-				$('#myMaps').wayfinding({
-					'maps': [
-						{'path': 'map_version6.svg', 'id': 'floor1'},
-					],
-					'path': {
-						width: 3,
-						color: '#FFFFFF',
-						radius: 8,
-						speed: 8
-					},
-					'startpoint': function () {
-						return 'lcd.1';
-					},
-					'defaultMap': 'floor1',
-					'showLocation': true
-				}, function(){
-					console.log('callback reached');
-				});
-
-				//make the floor buttons clickable
-				$('#controls button').click(function () {
-					$('#myMaps').wayfinding('currentMap', $(this).prop('id'));
-				});
-
-				$('#controls #beginSelect').change(function () {
-					$('#myMaps').wayfinding('startpoint', $(this).val());
-					if ($('#endSelect').val() !== '') {
-						$('#myMaps').wayfinding('routeTo', $('#endSelect').val());
-					}
-				});
-
-				$('#controls #endSelect').change(function () {
-					$('#myMaps').wayfinding('routeTo', $(this).val());
-				});
-
-				$('#controls #accessible').change(function () {
-					if ($('#accessible:checked').val() !== undefined) {
-						$('#myMaps').wayfinding('accessibleRoute', true);
-					} else {
-						$('#myMaps').wayfinding('accessibleRoute', false);
-					}
-					if ($('#endSelect').val() !== '') {
-						$('#myMaps').wayfinding('routeTo', $('#endSelect').val());
-					}
-				});
-
-				$('#myMaps').on('wayfinding:roomClicked', function(e, r) {
-					$('#endSelect option[value="' + r.roomId + '"]').attr('selected', true);
-				});
-
+	<script src="jquery.wayfinding.js"></script>
+	<script src="jquery.panzoom.js"></script>
+	<script>
+		$(document).ready(function() {
+			'use strict';
+			$('#myMaps').wayfinding({
+				'maps': [{
+					'path': 'map_version6.svg',
+					'id': 'floor1'
+				}, ],
+				'path': {
+					width: 3,
+					color: '#FFFFFF',
+					radius: 8,
+					speed: 8
+				},
+				'startpoint': function() {
+					return 'lcd.1';
+				},
+				'defaultMap': 'floor1',
+				'showLocation': true
+			}, function() {
+				console.log('callback reached');
 			});
-		</script>
-	</body>
+
+			//make the floor buttons clickable
+			$('#controls button').click(function() {
+				$('#myMaps').wayfinding('currentMap', $(this).prop('id'));
+			});
+
+			$('#controls #beginSelect').change(function() {
+				$('#myMaps').wayfinding('startpoint', $(this).val());
+				if ($('#endSelect').val() !== '') {
+					$('#myMaps').wayfinding('routeTo', $('#endSelect').val());
+				}
+			});
+
+			$('#controls #endSelect').change(function() {
+				$('#myMaps').wayfinding('routeTo', $(this).val());
+			});
+
+			$('#controls #accessible').change(function() {
+				if ($('#accessible:checked').val() !== undefined) {
+					$('#myMaps').wayfinding('accessibleRoute', true);
+				} else {
+					$('#myMaps').wayfinding('accessibleRoute', false);
+				}
+				if ($('#endSelect').val() !== '') {
+					$('#myMaps').wayfinding('routeTo', $('#endSelect').val());
+				}
+			});
+
+			$('#myMaps').on('wayfinding:roomClicked', function(e, r) {
+				$('#endSelect option[value="' + r.roomId + '"]').attr('selected', true);
+			});
+
+		});
+	</script>
+</body>
+
 </html>
