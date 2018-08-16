@@ -12,8 +12,19 @@
 </head>
 
 <body>
-  <div class="header">
+  <div id="header "class="header">
      <a href="#default" class="logo"><i class="material-icons logo">person_pin_circle</i>NPBHS MAP</a>
+     <select id="beginSelect">
+ 					<option value="P11">P11</option>
+ 					<option value="Atest">T2</option>
+ 				</select>
+        <select id="endSelect">
+    					<option></option>
+    					<option disabled="true">West 1st</option>
+    					<option value="P11">P11</option>
+    					<option value="P12">P12</option>
+    					<option value="Atest">T2</option>
+    				</select>
      <div class="quick-select">
        <a class="tag-quick-select">Quick Find:</a>
        <a>Ryder Hall<i class="material-icons quick-select">star_border</i></a>
@@ -24,10 +35,6 @@
   <div id="controls">
     <label>Show</label>
     <label for="beginSelect">Begin Route at</label>
-    <select id="beginSelect">
-					<option value="P11">P11</option>
-					<option value="Atest">T2</option>
-				</select>
     <label for="endSelect">Show Route to</label>
     <select id="endSelect">
 					<option></option>

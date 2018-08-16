@@ -20,23 +20,23 @@ $(document).ready(function() {
     console.log('callback reached');
   });
 
-  //make the floor buttons clickable
+/*  //make the floor buttons clickable
   $('#controls button').click(function() {
     $('#myMaps').wayfinding('currentMap', $(this).prop('id'));
-  });
+  });*/
 
-  $('#controls #beginSelect').change(function() {
+  $('select#beginSelect').change(function() {
     $('#myMaps').wayfinding('startpoint', $(this).val());
     if ($('#endSelect').val() !== '') {
       $('#myMaps').wayfinding('routeTo', $('#endSelect').val());
     }
   });
 
-  $('#controls #endSelect').change(function() {
+  $('select#endSelect').change(function() {
     $('#myMaps').wayfinding('routeTo', $(this).val());
   });
 
-  $('#controls #accessible').change(function() {
+  /*$('#controls #accessible').change(function() {
     if ($('#accessible:checked').val() !== undefined) {
       $('#myMaps').wayfinding('accessibleRoute', true);
     } else {
@@ -45,7 +45,7 @@ $(document).ready(function() {
     if ($('#endSelect').val() !== '') {
       $('#myMaps').wayfinding('routeTo', $('#endSelect').val());
     }
-  });
+  });*/
 
   $('#myMaps').on('wayfinding:roomClicked', function(e, r) {
     $('#endSelect option[value="' + r.roomId + '"]').attr('selected', true);
