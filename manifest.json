@@ -3,13 +3,13 @@
   "name": "NPBHS MAP",
   "icons": [
     {
-      "src":"images/baseline_place_white_36dp.png",
-      "sizes": "192x192",
+      "src":"./images/NPBHS-Logo.png",
+      "sizes": "512x512",
       "type": "image/png"
     }
   ],
   "start_url": "/?utm_source=homescreen",
   "background_color": "#4a80f5",
-  "Theme_color": "#FFFFFF",
+  "theme_color": "#FFFFFF",
   "display": "standalone"
 }

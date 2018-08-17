@@ -4,6 +4,7 @@
 <head>
   <meta charset="utf-8">
   <title>NPBHS MAP</title>
+  <link rel="manifest" href="/manifest.json">
   <meta name="theme-color" content="#4a80f5">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
   <link rel="stylesheet" href="css/index.css">
@@ -12,26 +13,26 @@
 </head>
 
 <body>
-  <div id="header "class="header">
-     <a id="header_logo" class="logo"><i class="material-icons logo">person_pin_circle</i>NPBHS MAP</a>
-     <select id="beginSelect">
+  <div id="header " class="header">
+    <a id="header_logo" class="logo"><i class="material-icons logo">person_pin_circle</i>NPBHS MAP</a>
+    <select id="beginSelect">
  					<option value="P11">P11</option>
  					<option value="Atest">T2</option>
  				</select>
-        <select id="endSelect">
+    <select id="endSelect">
     					<option></option>
     					<option disabled="true">West 1st</option>
     					<option value="P11">P11</option>
     					<option value="P12">P12</option>
     					<option value="Atest">T2</option>
     				</select>
-     <div class="quick-select">
-       <a class="tag-quick-select">Quick Find:</a>
-       <a>Ryder Hall<i class="material-icons quick-select">star_border</i></a>
-       <a>Pridham Hall<i class="material-icons quick-select">star_border</i></a>
-       <a>Gym<i class="material-icons quick-select">star_border</i></a>
-     </div>
-   </div>
+    <div class="quick-select">
+      <a class="tag-quick-select">Quick Find:</a>
+      <a>Ryder Hall<i class="material-icons quick-select">star_border</i></a>
+      <a>Pridham Hall<i class="material-icons quick-select">star_border</i></a>
+      <a>Gym<i class="material-icons quick-select">star_border</i></a>
+    </div>
+  </div>
   <div id="controls">
     <label>Show</label>
     <label for="beginSelect">Begin Route at</label>
@@ -60,8 +61,14 @@
 
   <script src="scripts/jquery.wayfinding.js"></script>
   <script src="scripts/jquery.panzoom.js"></script>
-  <script src="scripts/index.js">
+  <script src="scripts/index.js"></script>
+
+  <script type="text/javascript">
+  if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('service-worker.js').then(function() { console.log("Service Worker Registered"); });
+}
   </script>
+
 </body>
 
 </html>
