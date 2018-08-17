@@ -1,6 +1,6 @@
 # npbhs_map
 
-Progress: 40%
+Progress: 50%
 
 Desktop:
 ![NPBHS MAP](https://i.imgur.com/rAE6Nyx.png)
