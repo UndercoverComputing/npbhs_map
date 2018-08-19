@@ -106,7 +106,7 @@
 		//styling for the "you are here pin"
 		'locationIndicator': {
 			fill: 'red',
-			height: 40
+			height: 60
 		},
 		'pinchToZoom': true, // requires jquery.panzoom
 		'zoomToRoute': true,
@@ -208,7 +208,7 @@
 		/**
 		 * @function escapeSelector
 		 * @memberOf plugin
-		 * @private
+		 * @global
 		 * @inner
 		 * @param {string} sel the jQuery selector to escape
 		 * @description to handle jQuery selecting ids with periods and other special characters
@@ -919,7 +919,7 @@
 
 			el.panzoom({
 				minScale: 1,
-        maxScale:10,
+        maxScale:5,
 				contain: false,
 				cursor: 'move'
 			});
@@ -1034,7 +1034,7 @@
 			y = parseFloat(y);
 			w = parseFloat(w);
 			h = parseFloat(h);
-
+      console.log(w,h)
 			var viewBox = svg.getAttribute('viewBox');
 			var viewX = parseFloat(viewBox.split(/\s+|,/)[0]); // viewBox is [x, y, w, h], x == [0]
 			var viewY = parseFloat(viewBox.split(/\s+|,/)[1]);
@@ -1085,7 +1085,7 @@
 					zoomIn.Y = interpolateValue(old.Y, target.Y, current, count);
 					zoomIn.W = interpolateValue(old.W, target.W, current, count);
 					zoomIn.H = interpolateValue(old.H, target.H, current, count);
-
+					console.log(zoomIn)
 					if(options.pinchToZoom) {
 						// Use CSS 3-based zooming
 						panzoomWithViewBoxCoords($(svg).parent()[0], svg, zoomIn.X, zoomIn.Y, zoomIn.W, zoomIn.H);
@@ -1150,7 +1150,7 @@
 			path.style.strokeDasharray = drawLength + ' ' + drawLength;
 			path.style.strokeDashoffset = drawLength;
 			pathRect = path.getBBox();
-			path.style.transition = path.style.WebkitTransition = 'stroke-dashoffset ' + animationDuration + 'ms linear';
+			path.style.transition = path.style.WebkitTransition = 'stroke-dashoffset ' + animationDuration + 'ms ease-in-out';
 			path.style.strokeDashoffset = '0';
 
 			// If this is the last segment, trigger the 'wayfinding:animationComplete' event
