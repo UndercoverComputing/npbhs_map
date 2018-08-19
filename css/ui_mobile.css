@@ -1,17 +1,17 @@
 /*Mobile Interface w/ Touch Device Detection*/
 
 @media (hover:none), (hover:on-demand) {
-  .header{
+  .header {
     width: 100%;
     position: fixed;
-    padding: none;
+    padding: 0.5em;
   }
-
   .header a.logo {
     color: white;
     background-color: #4a80f5;
     font-size: 2em;
     text-align: center;
+    margin-bottom: 0.25em;
   }
   .header a {
     float: left;
@@ -28,6 +28,7 @@
     color: gray;
     margin-right: 1em;
     vertical-align: middle;
+    user-select: none;
   }
   div.quick-select {
     display: none;
@@ -40,9 +41,10 @@
     position: fixed;
     width: 100%;
   }
-  div.quick-select-mobile a{
+  div.quick-select-mobile a {
     display: block;
     float: left;
+    user-select: none;
     text-align: justify;
     padding-left: 0.3em;
     padding-right: 0.3em;
@@ -54,11 +56,18 @@
     border-radius: .25em;
     background-color: white;
     color: gray;
-    margin: 0.15em;
+    margin-left: 0.25em;
+    margin-right: 0.25em;
     vertical-align: middle;
   }
-  .quick-select-mobile > a.tag-quick-select {
-    margin-top: 0.3em;
+
+  div.quick-select-mobile a:active {
+    background-color: lightgray;
+    color: white;
+  }
+
+  .quick-select-mobile>a.tag-quick-select {
+    margin-top: 0;
     color: white;
     background-color: #4a80f5;
     font-size: 2vh;
@@ -69,8 +78,10 @@
     padding-left: 0.15em;
     padding-right: 0.15em;
   }
+
+
   i.material-icons.quick-select {
-    vertical-align:middle;
+    vertical-align: middle;
     font-size: 140%;
   }
 }
