@@ -28,6 +28,11 @@
     margin-right: 1em;
     vertical-align: middle;
   }
+
+  .header a:hover {
+     cursor: pointer;
+  }
+
   .header a.logo {
     color: white;
     background-color: #4a80f5;

@@ -1034,7 +1034,7 @@
 			y = parseFloat(y);
 			w = parseFloat(w);
 			h = parseFloat(h);
-      console.log(w,h)
+
 			var viewBox = svg.getAttribute('viewBox');
 			var viewX = parseFloat(viewBox.split(/\s+|,/)[0]); // viewBox is [x, y, w, h], x == [0]
 			var viewY = parseFloat(viewBox.split(/\s+|,/)[1]);
@@ -1085,7 +1085,7 @@
 					zoomIn.Y = interpolateValue(old.Y, target.Y, current, count);
 					zoomIn.W = interpolateValue(old.W, target.W, current, count);
 					zoomIn.H = interpolateValue(old.H, target.H, current, count);
-					console.log(zoomIn)
+
 					if(options.pinchToZoom) {
 						// Use CSS 3-based zooming
 						panzoomWithViewBoxCoords($(svg).parent()[0], svg, zoomIn.X, zoomIn.Y, zoomIn.W, zoomIn.H);
