@@ -4,49 +4,39 @@
 <head>
   <meta charset="utf-8">
   <title>NPBHS MAP</title>
-  <link rel="icon" href="images/baseline_place_white_36dp.png"/>
+  <link rel="icon" href="images/baseline_place_white_36dp.png" />
   <link rel="manifest" href="/manifest.json">
   <meta name="theme-color" content="#4a80f5">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
   <link rel="stylesheet" href="css/index.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <script src="scripts/jquery-3.3.1.min.js"></script>
+  <script src="scripts/jquery.wayfinding.js"></script>
+  <script src="scripts/jquery.panzoom.js"></script>
+  <script src="scripts/jquery.nice-select.js"></script>
+  <script src="scripts/index.js"></script>
 </head>
 
 <body>
-  <div id="header " class="header">
+  <div id="header" class="header">
     <a id="header_logo" class="logo"><i class="material-icons logo">person_pin_circle</i>NPBHS MAP</a>
-    <select id="beginSelect">
- 					<option value="P11">P11</option>
- 					<option value="Atest">T2</option>
+    <select id="beginSelect" class="select-style" style="width=30%">
+ 					<option value="P6">P6</option>
+ 					<option value="Ryder">Ryder</option>
  				</select>
-    <select id="endSelect">
+    <select id="endSelect" class="select-style">
     					<option></option>
     					<option disabled="true">West 1st</option>
-    					<option value="P11">P11</option>
-    					<option value="P12">P12</option>
+    					<option value="Ryder">Ryder</option>
+    					<option value="P6">P6</option>
     					<option value="Atest">T2</option>
     				</select>
     <div class="quick-select">
       <a class="tag-quick-select">Quick Find:</a>
-      <a>Ryder Hall<i class="material-icons quick-select">star_border</i></a>
-      <a>Pridham Hall<i class="material-icons quick-select">star_border</i></a>
-      <a>Gym<i class="material-icons quick-select">star_border</i></a>
+      <a id="qs-ryder">Ryder Hall<i class="material-icons quick-select">star_border</i></a>
+      <a id="qs-pridham">Pridham Hall<i class="material-icons quick-select">star_border</i></a>
+      <a id="qs-gym">Gym<i class="material-icons quick-select">star_border</i></a>
     </div>
-  </div>
-  <div id="controls">
-    <label>Show</label>
-    <label for="beginSelect">Begin Route at</label>
-    <label for="endSelect">Show Route to</label>
-    <select id="endSelect">
-					<option></option>
-					<option disabled="true">West 1st</option>
-					<option value="P11">P11</option>
-					<option value="P12">P12</option>
-					<option value="Atest">T2</option>
-				</select>
-    <label for="accessible">Accessible</label>
-    <input id="accessible" type="checkbox" name="accessible" value="Accessible" />
   </div>
   <div id="content">
     <div id="myMaps">
@@ -55,21 +45,19 @@
 
   <div class="quick-select-mobile">
     <a class="tag-quick-select">Quick Find:</a>
-    <a>Ryder Hall<i class="material-icons quick-select">star_border</i></a>
-    <a>Pridham Hall<i class="material-icons quick-select">star_border</i></a>
-    <a>Gym<i class="material-icons quick-select">star_border</i></a>
+    <a id='mqs-ryder'>Ryder Hall<i class="material-icons quick-select">star_border</i></a>
+    <a id="mqs-pridham">Pridham Hall<i class="material-icons quick-select">star_border</i></a>
+    <a id="mqs-gym">Gym<i class="material-icons quick-select">star_border</i></a>
   </div>
 
-  <script src="scripts/jquery.wayfinding.js"></script>
-  <script src="scripts/jquery.panzoom.js"></script>
-  <script src="scripts/index.js"></script>
-
   <script type="text/javascript">
-  if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('service-worker.js').then(function() { console.log("Service Worker Registered"); });
-}
-  </script>
 
+
+
+    /*if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('service-worker.js').then(function() { console.log("Service Worker Registered"); });
+}*/
+  </script>
 </body>
 
 </html>
