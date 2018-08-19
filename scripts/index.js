@@ -2,23 +2,28 @@ $(document).ready(function() {
   'use strict';
   $('#myMaps').wayfinding({
     'maps': [{
-      'path': 'tests/map_version6.svg',
+      'path': 'maps/map2.svg',
       'id': 'floor1'
     }, ],
     'path': {
-      width: 3,
-      color: '#FFFFFF',
+      width: 5,
+      color: 'Red',
       radius: 8,
       speed: 8
     },
     'startpoint': function() {
-      return 'lcd.1';
+      return 'P6';
     },
     'defaultMap': 'floor1',
     'showLocation': true
-  }, function() {
+  }, {
+    $zoomIn: $("#zoom")
+},
+  function() {
     console.log('callback reached');
   });
+
+
 
 /*  //make the floor buttons clickable
   $('#controls button').click(function() {
@@ -36,6 +41,7 @@ $(document).ready(function() {
     $('#myMaps').wayfinding('routeTo', $(this).val());
   });
 
+
   /*$('#controls #accessible').change(function() {
     if ($('#accessible:checked').val() !== undefined) {
       $('#myMaps').wayfinding('accessibleRoute', true);
@@ -52,4 +58,58 @@ $(document).ready(function() {
     $('#endSelect option[value="' + r.roomId + '"]').attr('selected', true);
   });
 
+  $('#zoom').on("click", function() {
+    $('div#floor1').panzoom('zoom')
+  });
+
+  $('.logo').on("click", function() {
+    $('div#floor1').panzoom('reset')
+  });
+
+  $('a#qs-ryder').on("click", function() {
+    $('div#floor1').panzoom('reset');
+    $("div#floor1").panzoom("pan", 600, -500, {relative: false, animate: true});
+  });
+
+  $('a#qs-pridham').on("click", function() {
+    $('div#floor1').panzoom('reset');
+    $('div#floor1').panzoom('zoom',1.5);
+    $("div#floor1").panzoom("pan", 1000, 700, {relative: false, animate: true});
+  });
+
+  $('a#qs-gym').on("click", function() {
+    $('div#floor1').panzoom('reset');
+    $('div#floor1').panzoom('zoom',1.5);
+    $("div#floor1").panzoom("pan", -650, 150, {relative: false, animate: true});
+  });
+
+  $('a#qs-ryder').on("click", function() {
+    $('div#floor1').panzoom('reset');
+    $("div#floor1").panzoom("pan", 600, -500, {relative: false, animate: true});
+  });
+
+  $('a#mqs-ryder').on("click", function() {
+    $('div#floor1').panzoom('reset');
+    $('div#floor1').panzoom('zoom',3.2);
+    $("div#floor1").panzoom("pan", 460, 575, {relative: false, animate: true});
+    $('#myMaps').wayfinding('startpoint','Ryder');
+  });
+
+  $('a#mqs-pridham').on("click", function() {
+    $('div#floor1').panzoom('reset');
+    $('div#floor1').panzoom('zoom',3);
+    $("div#floor1").panzoom("pan", 400, 950, {relative: false, animate: true});
+    $('#myMaps').wayfinding('startpoint','P6');
+  });
+
+  $('a#mqs-gym').on("click", function() {
+    $('div#floor1').panzoom('reset');
+    $('div#floor1').panzoom('zoom',3);
+    $("div#floor1").panzoom("pan", -300, 750, {relative: false, animate: true});
+  });
+
+
+});
+$(document).ready(function() {
+  $('select').niceSelect();
 });
