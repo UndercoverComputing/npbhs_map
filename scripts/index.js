@@ -9,7 +9,7 @@ $(document).ready(function() {
         width: 5,
         color: 'Red',
         radius: 8,
-        speed: 8
+        speed: 20
       },
       'startpoint': function() {
         return 'P6';
