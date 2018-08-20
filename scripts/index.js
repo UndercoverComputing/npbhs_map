@@ -128,8 +128,12 @@ $(document).ready(function() {
     });
   });
 
-  $('i#+.material-icons').on("click", function() {
+  $('i#zoom_in.material-icons').on("click", function() {
     $('div#floor1').panzoom('zoom');
+  });
+
+  $('i#zoom_out.material-icons').on("click", function() {
+    $('div#floor1').panzoom('zoom',true);
   });
 
   if ('serviceWorker' in navigator) {

@@ -126,7 +126,7 @@
     font-weight: bold;
   }
   div.zoom_controller > i:hover {
-    color: black;
+    color: gray;
     cursor: pointer;
   }
 }
