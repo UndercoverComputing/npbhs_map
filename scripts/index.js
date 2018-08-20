@@ -2,7 +2,7 @@ $(document).ready(function() {
   'use strict';
   $('#myMaps').wayfinding({
       'maps': [{
-        'path': 'maps/map2.svg',
+        'path': 'maps/map3.svg',
         'id': 'floor1'
       }, ],
       'path': {
@@ -80,6 +80,7 @@ $(document).ready(function() {
       relative: false,
       animate: true
     });
+    $('#myMaps').wayfinding('startpoint', 'P6');
   });
 
   $('a#qs-gym').on("click", function() {
@@ -89,6 +90,7 @@ $(document).ready(function() {
       relative: false,
       animate: true
     });
+    $('#myMaps').wayfinding('startpoint', 'Gym');
   });
 
   $('a#qs-ryder').on("click", function() {
@@ -97,6 +99,7 @@ $(document).ready(function() {
       relative: false,
       animate: true,
     });
+    $('#myMaps').wayfinding('startpoint', 'Ryder');
   });
 
   $('a#mqs-ryder').on("click", function() {
@@ -126,6 +129,7 @@ $(document).ready(function() {
       relative: false,
       animate: true
     });
+    $('#myMaps').wayfinding('startpoint', 'Gym');
   });
 
   $('i#zoom_in.material-icons').on("click", function() {
