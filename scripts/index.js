@@ -16,7 +16,7 @@ $(document).ready(function() {
       },
       'defaultMap': 'floor1',
       'showLocation': true
-    }, 
+    },
     function() {
       console.log('Started');
     });
@@ -126,6 +126,10 @@ $(document).ready(function() {
       relative: false,
       animate: true
     });
+  });
+
+  $('i#+.material-icons').on("click", function() {
+    $('div#floor1').panzoom('zoom');
   });
 
   if ('serviceWorker' in navigator) {
