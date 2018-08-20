@@ -98,6 +98,7 @@
     overflow: hidden;
     border-radius: 0.25em;
     perspective: 1px;
+    user-select: none;
   }
 
   div.zoom_controller > i {
