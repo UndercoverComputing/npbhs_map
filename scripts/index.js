@@ -95,7 +95,7 @@ $(document).ready(function() {
     $('div#floor1').panzoom('reset');
     $("div#floor1").panzoom("pan", 600, -500, {
       relative: false,
-      animate: true
+      animate: true,
     });
   });
 
