@@ -316,7 +316,7 @@
 		rangeStep: 0.05,
 
 		// Animation duration (ms)
-		duration: 800,
+		duration: 200,
 		// CSS easing used for scale transition
 		easing: 'ease-in-out',
 
