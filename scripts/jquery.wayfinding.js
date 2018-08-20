@@ -74,7 +74,7 @@
 		'path': {
 			color: 'red', // the color of the solution path that will be drawn
 			radius: 10, // the radius in pixels to apply to the solution path
-			speed: 8, // the speed at which the solution path with be drawn
+			speed: 2, // the speed at which the solution path with be drawn
 			width: 3 // the width of the solution path in pixels
 		},
 		// The door identifier for the default starting point
@@ -109,7 +109,7 @@
 			height: 60
 		},
 		'pinchToZoom': true, // requires jquery.panzoom
-		'zoomToRoute': true,
+		'zoomToRoute': false,
 		'zoomPadding': 300,
 		// milliseconds to wait during animation when a floor change occurs
 		'floorChangeAnimationDelay': 1250

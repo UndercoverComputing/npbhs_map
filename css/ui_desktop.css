@@ -103,4 +103,30 @@
   .select-style select:focus {
     outline: none;
   }
+
+  div.zoom_controller {
+    position: fixed;
+    bottom: 1em;
+    right: 1em;
+    background-color: #4a80f5;
+    z-index: 1000;
+    height: 4.25em;
+    width: 2em;
+    display: block;
+    border-collapse: separate;
+    overflow: hidden;
+    border-radius: 0.25em;
+    perspective: 1px;
+  }
+
+  div.zoom_controller > i {
+    color: white;
+    background-color: #4a80f5;
+    font-size: 2em; !important
+    font-weight: bold;
+  }
+  div.zoom_controller > i:hover {
+    color: gray;
+    cursor: pointer;
+  }
 }

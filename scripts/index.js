@@ -9,15 +9,13 @@ $(document).ready(function() {
         width: 5,
         color: 'Red',
         radius: 8,
-        speed: 20
+        speed: 4
       },
       'startpoint': function() {
         return 'P6';
       },
       'defaultMap': 'floor1',
       'showLocation': true
-    }, {
-      $zoomIn: $("#zoom")
     },
     function() {
       console.log('Started');
@@ -128,6 +126,14 @@ $(document).ready(function() {
       relative: false,
       animate: true
     });
+  });
+
+  $('i#zoom_in.material-icons').on("click", function() {
+    $('div#floor1').panzoom('zoom');
+  });
+
+  $('i#zoom_out.material-icons').on("click", function() {
+    $('div#floor1').panzoom('zoom',true);
   });
 
   if ('serviceWorker' in navigator) {
