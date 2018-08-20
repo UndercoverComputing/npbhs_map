@@ -924,7 +924,7 @@
 		function initializePanZoom(el) {
 
 			el.panzoom({
-				minScale: 1,
+				minScale: 0.7,
         maxScale:5,
 				contain: false,
 				cursor: 'move'

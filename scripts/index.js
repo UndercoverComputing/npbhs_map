@@ -129,11 +129,16 @@ $(document).ready(function() {
   });
 
   $('i#zoom_in.material-icons').on("click", function() {
-    $('div#floor1').panzoom('zoom');
+    $('div#floor1').panzoom('zoom',{
+      focal: { clientX: (window.innerWidth / 2), clientY: (window.innerHeight / 2) },
+      increment: 0.2,
+    });
   });
 
   $('i#zoom_out.material-icons').on("click", function() {
-    $('div#floor1').panzoom('zoom',true);
+    $('div#floor1').panzoom('zoom',true,{
+      focal: { clientX: (window.innerWidth / 2), clientY: (window.innerHeight / 2) }
+    });
   });
 
   if ('serviceWorker' in navigator) {
