@@ -2,7 +2,7 @@ $(document).ready(function() {
   'use strict';
   $('#myMaps').wayfinding({
       'maps': [{
-        'path': 'maps/map3.svg',
+        'path': 'maps/map4.svg',
         'id': 'floor1'
       }, ],
       'path': {
