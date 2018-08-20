@@ -316,7 +316,7 @@
 		rangeStep: 0.05,
 
 		// Animation duration (ms)
-		duration: 200,
+		duration: 800,
 		// CSS easing used for scale transition
 		easing: 'ease-in-out',
 
@@ -506,7 +506,7 @@
 			if (matrix) {
 				matrix.shift();
 			}
-			
+
 			return matrix || [ 1, 0, 0, 1, 0, 0 ];
 		},
 

@@ -152,6 +152,7 @@
 	 * @property {float} l length of this segment
 	 * @property {float} r current shortest combined lengths to reach here
 	 * @property {string} p prior path segment to follow back for shortest path
+	 * @property {string[]} distance
 	 */
 
 	/**
@@ -336,6 +337,7 @@
 		// Extract data from the svg maps
 		function buildDataStore(mapNum, map, el) {
 			var path,
+				distance,
 				doorId,
 				x1,
 				y1,
@@ -347,6 +349,9 @@
 
 			//Paths
 			dataStore.p[mapNum] = [];
+
+			//Distance array
+			window.distance = []
 
 			$('#Paths line', el).each(function () {
 				path = {};
@@ -705,6 +710,7 @@
 				backTrack('pa', destinationmapNum, reversePathStart);
 				solution.reverse();
 			}
+			window.distance = solution
 			return solution;
 		}
 
