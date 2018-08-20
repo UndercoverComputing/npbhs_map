@@ -9,16 +9,14 @@ $(document).ready(function() {
         width: 5,
         color: 'Red',
         radius: 8,
-        speed: 20
+        speed: 4
       },
       'startpoint': function() {
         return 'P6';
       },
       'defaultMap': 'floor1',
       'showLocation': true
-    }, {
-      $zoomIn: $("#zoom")
-    },
+    }, 
     function() {
       console.log('Started');
     });
