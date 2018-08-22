@@ -153,4 +153,7 @@ margin-left: 1em;
 .no-csspointerevents .nice-select.open .list {
   display: block; }
 
-.nice-select.open .list { max-height: 300px; overflow-y: scroll; }
+.nice-select.open .list {
+  max-height: 300px;
+  overflow-y: scroll;
+}

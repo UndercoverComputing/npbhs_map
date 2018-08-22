@@ -19,13 +19,6 @@ self.addEventListener('install', e => {
         '/scripts/jquery.nice-select.js',
         '/scripts/jquery.panzoom.js',
         '/scripts/jquery.wayfinding.js',
-        '/tests/header.css',
-        '/tests/header.html',
-        '/tests/jquery.panzoom.js',
-        '/tests/jquery.wayfinding.js',
-        '/tests/map_version6.svg',
-        '/tests/map_viewer.css',
-        '/tests/map_viewer.html',
       ])
           .then(() => self.skipWaiting());
     })
