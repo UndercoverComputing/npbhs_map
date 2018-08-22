@@ -1,60 +1,164 @@
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 1180px) {
   .header {
-    width: 100%;
-    position: fixed;
-    display: block;
-    padding: 0 .5em .5em;
-    height: auto;
-    background-color: #4a80f5;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.12);
     z-index: 1000;
-  }
-  .header a {
-    float: none;
-    display: inline-block;
-    text-align: left;
-    padding-left: 1em;
-    padding-right: 1em;
-    padding-top: 0.5em;
-    padding-bottom: 0.5em;
-    text-decoration: none;
-    font-size: 0.7em;
-    line-height: 1.6em;
-    border-radius: .25em;
-    background-color: white;
-    color: gray;
-    margin-right: 0.5em;
-    margin-top: .25em;
-    vertical-align: middle;
-    margin-right: 1em;
-  }
-  .quick-select {
-    position: relative;
-    display: inline-block;
-    overflow: hidden;
-    text-align: center;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    position: fixed;
+    overflow: visible;
+    background-color: #4a80f5;
+    padding: .5em .5em;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   }
   .header a.logo {
-    vertical-align: bottom;
     color: white;
     background-color: #4a80f5;
     font-size: 1em;
     font-weight: bold;
-    padding-top: 0.1%;
-    padding-bottom: 0.1%;
-    margin-top: 0.25em;
+    text-align: center;
+    margin-bottom: 0.25em;
   }
-  .quick-select-mobile {
+  .header a {
+    float: left;
+    text-align: center;
+    padding-left: 0.2em;
+    padding-right: 0.2em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    text-decoration: none;
+    font-size: 1em;
+    line-height: 1.6em;
+    border-radius: .25em;
+    background-color: white;
+    color: gray;
+    margin-right: 1em;
+    vertical-align: middle;
+    user-select: none;
+  }
+  div.quick-select {
     display: none;
   }
-  i.material-icons.quick-select {
-    padding-left: 0.2em;
-    vertical-align: text-bottom;
+  div.quick-select-mobile {
+    display: inline-block;
+    padding: 0.5em .1em;
+    background-color: #4a80f5;
+    bottom: 0;
+    position: fixed;
+    width: 100%;
   }
-  a.tag-quick-select {
+  div.quick-select-mobile a {
+    display: block;
+    float: left;
+    user-select: none;
+    text-align: justify;
+    padding-left: 0.3em;
+    padding-right: 0.3em;
+    padding-top: 0.35em;
+    padding-bottom: 0.35em;
+    text-decoration: none;
+    font-size: 0.6em;
+    line-height: 2em;
+    border-radius: .25em;
+    background-color: white;
+    color: gray;
+    margin-left: 0.25em;
+    margin-right: 0.25em;
+    vertical-align: middle;
+  }
+
+  div.quick-select-mobile a:active {
+    background-color: lightgray;
+    color: white;
+  }
+
+  .quick-select-mobile>a.tag-quick-select {
+    margin-top: 0.25em;
     color: white;
     background-color: #4a80f5;
+    font-size: 0.5em;
     font-family: 'Rubik', sans-serif;
-    font-weight: normal;
+    font-weight: bold;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0.1em;
+    padding-right: 0.1em;
   }
+
+
+  i.material-icons.quick-select {
+    vertical-align: middle;
+    font-size: 130%;
+  }
+
+  div.zoom_controller {
+    position: fixed;
+    bottom: 3.5em;
+    right: .75em;
+    background-color: #4a80f5;
+    z-index: 1000;
+    height: 4.25em;
+    width: 2em;
+    display: block;
+    border-collapse: separate;
+    overflow: hidden;
+    border-radius: 0.25em;
+    perspective: 1px;
+    user-select: none;
+  }
+
+  div.zoom_controller > i {
+    color: white;
+    background-color: #4a80f5;
+    font-size: 2em; !important
+    font-weight: bold;
+  }
+  div.zoom_controller > i:active {
+    color: gray;
+    cursor: pointer;
+  }
+
+  div.nice-select.select-style {
+    margin-top: 1em; !important
+  }
+}
+
+@media screen and (max-width: 33em) {
+  .header {
+    padding: 2%;
+  }
+
+  .header a.logo {
+    color: white;
+    background-color: #4a80f5;
+    font-size: 1em;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 0.25em;
+    width: 100%;
+    transform: translateX(-0.75em);
+  }
+  div.nice-select.select-style {
+    margin-top: 0; !important
+    margin-left: 1%; !important
+    margin-right: 1%; !important
+  }
+  .header a {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  div.nice-select {
+    width: 42%; !important
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 320px) {
+    div.quick-select-mobile a {
+      margin-left: 0.15em;
+      margin-right: 0.15em;
+      font-size: 0.55em;
+    }
+    i.material-icons.quick-select {
+      font-size: 120%;
+    }
 }

@@ -40,7 +40,6 @@ $(document).ready(function() {
     $('#myMaps').wayfinding('routeTo', $(this).val());
   });
 
-
   /*$('#controls #accessible').change(function() {
     if ($('#accessible:checked').val() !== undefined) {
       $('#myMaps').wayfinding('accessibleRoute', true);
@@ -144,6 +143,15 @@ $(document).ready(function() {
       focal: { clientX: (window.innerWidth / 2), clientY: (window.innerHeight / 2) }
     });
   });
+
+  let deferredPrompt;
+
+window.addEventListener('beforeinstallprompt', (e) => {
+  // Prevent Chrome 67 and earlier from automatically showing the prompt
+  e.preventDefault();
+  // Stash the event so it can be triggered later.
+  deferredPrompt = e;
+});
 
   if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('service-worker.js').then(function() {
