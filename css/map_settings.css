@@ -12,7 +12,6 @@ body {
 }
 
 #content {
-  border: 1px solid black;
   width: 100vw;
   position: fixed;
   overflow: hidden;
@@ -37,7 +36,6 @@ body {
 
 @media (hover:none), (hover:on-demand) {
 	#content {
-	  border: 1px solid black;
 	  width: 100%;
 	  position: fixed;
 	  overflow: hidden;
@@ -45,7 +43,7 @@ body {
 
 	#myMaps {
 	  position: relative;
-	  height: 35em;
+	  height: auto;
 	  width: auto;
 	  background-color: #BBDAA4;
 	  overflow: hidden;
