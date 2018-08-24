@@ -18,4 +18,4 @@ Desktop:
 
 Mobile:
 
-![Imgur](https://i.imgur.com/f9YCe6V.png)
+![Imgur](https://i.imgur.com/d08yH97.png)
