@@ -12,7 +12,7 @@ $(document).ready(function() {
         speed: 4
       },
       'startpoint': function() {
-        return 'P6';
+        return 'Ryder';
       },
       'defaultMap': 'floor1',
       'showLocation': true
