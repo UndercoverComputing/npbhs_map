@@ -9,6 +9,7 @@ Demo: [skyris.me](https://skyris.me)
 * More Routes
 * Enhanced Search Menu
 * Multifloor Navigation
+* Navigate to nearest Toilets
 
 
 Made as part of the NCEA Level 3 Prototyping standard.
