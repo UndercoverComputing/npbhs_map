@@ -1,82 +1,80 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-    <meta name="theme-color" content="#4a80f5">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <link rel="stylesheet" href="header.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
-      <script src="jquery-3.3.1.min.js"></script>
-  </head>
-  <body>
-    <div class="header">
-      <a  id="doubleTap" href="#default" class="logo"><i class="material-icons logo">person_pin_circle</i>NPBHS MAP</a>
-      <div class="quick-select">
-        <a class="tag-quick-select">Quick Find:</a>
-        <a>Ryder Hall<i class="material-icons quick-select">star_border</i></a>
-        <a>Pridham Hall<i class="material-icons quick-select">star_border</i></a>
-        <a>Gym<i class="material-icons quick-select">star_border</i></a>
-      </div>
-      <div id="dropdown" class="ddmenu">
-        <i class="material-icons">
-  settings
-  </i>
-      <ul>
-        <li><a href="#">Add to Homescreen</a></li>
-      </ul>
-    </div>
-    </div>
-    <div class="content">
-      <img src="map_version6.svg" alt="School Map" viewport="20 0 1000 1000">
-    </div>
 
-    <div class="quick-select-mobile">
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="theme-color" content="#4a80f5">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <link rel="stylesheet" href="header.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script src="jquery-3.3.1.min.js"></script>
+</head>
+
+<body>
+  <div class="header">
+    <a id="doubleTap" href="#default" class="logo"><i class="material-icons logo">person_pin_circle</i>NPBHS MAP</a>
+    <div class="quick-select">
       <a class="tag-quick-select">Quick Find:</a>
       <a>Ryder Hall<i class="material-icons quick-select">star_border</i></a>
       <a>Pridham Hall<i class="material-icons quick-select">star_border</i></a>
       <a>Gym<i class="material-icons quick-select">star_border</i></a>
     </div>
+    <div id="dropdown" class="ddmenu">
+      <i class="material-icons">settings</i>
+      <ul>
+        <li><a href="#">Add to Homescreen</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="content">
+    <img src="map_version6.svg" alt="School Map" viewport="20 0 1000 1000">
+  </div>
+
+  <div class="quick-select-mobile">
+    <a class="tag-quick-select">Quick Find:</a>
+    <a>Ryder Hall<i class="material-icons quick-select">star_border</i></a>
+    <a>Pridham Hall<i class="material-icons quick-select">star_border</i></a>
+    <a>Gym<i class="material-icons quick-select">star_border</i></a>
+  </div>
   </div>
 
   <script>
-  $("#dropdown").on("click", function(e){
-e.preventDefault();
+    $("#dropdown").on("click", function(e) {
+      e.preventDefault();
 
-if($(this).hasClass("open")) {
-  $(this).removeClass("open");
-  $(this).children("ul").slideUp("fast");
-} else {
-  $(this).addClass("open");
-  $(this).children("ul").slideDown("fast");
-}
-});
+      if ($(this).hasClass("open")) {
+        $(this).removeClass("open");
+        $(this).children("ul").slideUp("fast");
+      } else {
+        $(this).addClass("open");
+        $(this).children("ul").slideDown("fast");
+      }
+    });
 
-(function($) {
-     $.fn.doubleTap = function(doubleTapCallback) {
-         return this.each(function(){
-			var elm = this;
-			var lastTap = 0;
-			$(elm).bind('vmousedown', function (e) {
-                                var now = (new Date()).valueOf();
-				var diff = (now - lastTap);
-                                lastTap = now ;
-                                if (diff < 250) {
-		                    if($.isFunction( doubleTapCallback ))
-		                    {
-		                       doubleTapCallback.call(elm);
-		                    }
-                                }
-			});
-         });
-    }
-})(jQuery);
+    (function($) {
+      $.fn.doubleTap = function(doubleTapCallback) {
+        return this.each(function() {
+          var elm = this;
+          var lastTap = 0;
+          $(elm).bind('vmousedown', function(e) {
+            var now = (new Date()).valueOf();
+            var diff = (now - lastTap);
+            lastTap = now;
+            if (diff < 250) {
+              if ($.isFunction(doubleTapCallback)) {
+                doubleTapCallback.call(elm);
+              }
+            }
+          });
+        });
+      }
+    })(jQuery);
 
-$("a#doubleTap.logo").doubleTap(function(){
-			// 'this' is the element that was double tap
+    $("a#doubleTap.logo").doubleTap(function() {
+      // 'this' is the element that was double tap
       console.log("Double Click")
-  });
+    });
   </script>
 
 </body>
