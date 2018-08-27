@@ -2,7 +2,7 @@ $(document).ready(function() {
   'use strict';
   $('#myMaps').wayfinding({
       'maps': [{
-        'path': 'maps/map5.svg',
+        'path': 'maps/map6.svg',
         'id': 'floor1'
       }, ],
       'path': {
@@ -11,16 +11,35 @@ $(document).ready(function() {
         radius: 5,
         speed: 4
       },
-      'startpoint': function() {
-        return 'Ryder';
-      },
       'defaultMap': 'floor1',
       'showLocation': true
     },
     function() {
       console.log('Started');
+      var start = $.getQuery('start');
+      var end = $.getQuery('end');
+      console.log(start, end);
+      if ($('select#beginSelect').find("option[value='" + start + "']").length == 1) {
+        $('#myMaps').wayfinding('startpoint', start);
+        $('select#beginSelect').val(start).niceSelect('update');
+        if ($('select#endSelect').find("option[value='" + end + "']").length == 1) {
+          $('#myMaps').wayfinding('routeTo', end);
+          $('select#endSelect').val(end).niceSelect('update');
+        }
+      }
     });
 
+  $("#dropdown").on("click", function(e) {
+    e.preventDefault();
+
+    if ($(this).hasClass("open")) {
+      $(this).removeClass("open");
+      $(this).children("ul").slideUp("fast");
+    } else {
+      $(this).addClass("open");
+      $(this).children("ul").slideDown("fast");
+    }
+  });
 
 
   /*  //make the floor buttons clickable
@@ -132,26 +151,32 @@ $(document).ready(function() {
   });
 
   $('i#zoom_in.material-icons').on("click", function() {
-    $('div#floor1').panzoom('zoom',{
-      focal: { clientX: (window.innerWidth / 2), clientY: (window.innerHeight / 2) },
+    $('div#floor1').panzoom('zoom', {
+      focal: {
+        clientX: (window.innerWidth / 2),
+        clientY: (window.innerHeight / 2)
+      },
       increment: 0.2,
     });
   });
 
   $('i#zoom_out.material-icons').on("click", function() {
-    $('div#floor1').panzoom('zoom',true,{
-      focal: { clientX: (window.innerWidth / 2), clientY: (window.innerHeight / 2) }
+    $('div#floor1').panzoom('zoom', true, {
+      focal: {
+        clientX: (window.innerWidth / 2),
+        clientY: (window.innerHeight / 2)
+      }
     });
   });
 
   let deferredPrompt;
 
-window.addEventListener('beforeinstallprompt', (e) => {
-  // Prevent Chrome 67 and earlier from automatically showing the prompt
-  e.preventDefault();
-  // Stash the event so it can be triggered later.
-  deferredPrompt = e;
-});
+  window.addEventListener('beforeinstallprompt', (e) => {
+    // Prevent Chrome 67 and earlier from automatically showing the prompt
+    e.preventDefault();
+    // Stash the event so it can be triggered later.
+    deferredPrompt = e;
+  });
 
   if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('service-worker.js').then(function() {
@@ -159,9 +184,29 @@ window.addEventListener('beforeinstallprompt', (e) => {
     });
   }
 
+  $('#force-reload').on("click", function() {
+    if (window.navigator && navigator.serviceWorker) {
+      navigator.serviceWorker.getRegistrations().then(function(registrations) {
+        for (let registration of registrations) {
+          registration.unregister();
+          console.log("Cleared")
+        }
+      });
+    }
+    window.location.reload()
+  });
+
 
 });
 
 $(document).ready(function() {
   $('select').niceSelect();
+
+  /*$(document).on('click.nice_select', '.nice-select', function(event) {
+    if ($(".quick-select-mobile").css('display') != "none") {
+      console.log("Mobile")
+      $("a#header_logo.logo").css({'transform' : 'translateY(-2em)'})
+    }
+  });
+  */
 });
