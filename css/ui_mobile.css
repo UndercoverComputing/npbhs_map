@@ -5,6 +5,7 @@
     width: 100%;
     position: fixed;
     padding: 0.5em;
+    border: 0;
   }
   .header a.logo {
     color: white;
@@ -91,7 +92,7 @@
     bottom: 3em;
     right: 1em;
     background-color: #4a80f5;
-    z-index: 1000;
+    z-index: 2;
     height: 4.25em;
     width: 2em;
     display: block;
@@ -111,5 +112,9 @@
   div.zoom_controller > i:active {
     color: gray;
     cursor: pointer;
+  }
+
+  #dropdown i.material-icons {
+    display: none;
   }
 }

@@ -9,6 +9,7 @@
     background-color: #4a80f5;
     padding: .5em .5em;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    border: 0;
   }
   .header a.logo {
     color: white;
@@ -95,7 +96,7 @@
     bottom: 3.5em;
     right: .75em;
     background-color: #4a80f5;
-    z-index: 1000;
+    z-index: 2;
     height: 4.25em;
     width: 2em;
     display: block;
@@ -119,6 +120,9 @@
 
   div.nice-select.select-style {
     margin-top: 1em; !important
+  }
+  #dropdown i.material-icons, #dropdown ul li ,#dropdown > a {
+    display: none;
   }
 }
 
@@ -150,6 +154,11 @@
     width: 42%; !important
     align-items: center;
   }
+
+  #dropdown i.material-icons,
+   #dropdown ul li ,#dropdown > a {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 320px) {
@@ -160,5 +169,9 @@
     }
     i.material-icons.quick-select {
       font-size: 120%;
+    }
+    #dropdown i.material-icons,
+     #dropdown ul li ,#dropdown > a {
+      display: none;
     }
 }
