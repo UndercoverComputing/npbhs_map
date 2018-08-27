@@ -1285,7 +1285,7 @@
 					draw = {};
 
 					if(solution.length === 0) {
-						console.warn('Attempting to route with no solution. This should never happen. SVG likely has errors. Destination is: ' + destination);
+						alert('Attempting to route with no solution. This should never happen. SVG likely has errors. Route is: ' + startpoint +' to '+ destination);
 						return;
 					}
 
