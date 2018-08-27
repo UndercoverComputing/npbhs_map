@@ -113,6 +113,11 @@
     color: gray;
     cursor: pointer;
   }
+  
+  #dropdown i.material-icons,
+   #dropdown ul li ,#dropdown > a {
+    display: none;
+  }
 
   #dropdown i.material-icons {
     display: none;
