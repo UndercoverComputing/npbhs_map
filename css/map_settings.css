@@ -87,17 +87,18 @@ div#mapLoading {
 }
 
 .wayfindingRoom {
-  fill: #ffc;
+  fill: blue !important;
   stroke: blue;
-  stroke-width: 2;
+  stroke-width: 3;
   stroke-dasharray: 5 3;
 }
 
 g.startPin path {
-  fill: cyan;
+  fill: #64dd17;
+  height: 100px;
 }
 
 g.destinationPin path {
-  fill: green;
-  height: 40px;
+  fill: red;
+  height: 80px;
 }
