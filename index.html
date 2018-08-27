@@ -16,6 +16,7 @@
   <script src="scripts/jquery.wayfinding.js"></script>
   <script src="scripts/jquery.panzoom.js"></script>
   <script src="scripts/jquery.nice-select.js"></script>
+  <script src="scripts/urlquery.js"></script>
   <script src="scripts/index.js"></script>
 </head>
 
@@ -23,6 +24,7 @@
   <div id="header" class="header">
     <a id="header_logo" class="logo"><i class="material-icons logo">person_pin_circle</i>NPBHS MAP</a>
     <select id="beginSelect" class="select-style">
+          <option></option>
  					<option value="Ryder">Ryder</option>
           <option value="Gym">Gym</option>
           <option value="P1">P1</option>
@@ -50,6 +52,12 @@
       <a id="qs-ryder">Ryder Hall<i class="material-icons quick-select">star_border</i></a>
       <a id="qs-pridham">Pridham Hall<i class="material-icons quick-select">star_border</i></a>
       <a id="qs-gym">Gym<i class="material-icons quick-select">star_border</i></a>
+    </div>
+    <div id="dropdown" class="ddmenu">
+      <i class="material-icons">settings</i>
+      <ul>
+        <li><a id="force-reload">Force Reload</a></li>
+      </ul>
     </div>
   </div>
   <div id="content">
