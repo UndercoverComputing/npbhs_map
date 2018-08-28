@@ -106,7 +106,7 @@
 		//styling for the "you are here pin"
 		'locationIndicator': {
 			fill: 'red',
-			height: 60
+			height: 100
 		},
 		'pinchToZoom': true, // requires jquery.panzoom
 		'zoomToRoute': false,
@@ -318,12 +318,15 @@
 			pin.setAttribute('d', symbolPath);
 			pin.setAttribute('fill', '#E81E25');
 			pin.setAttribute('stroke', '#000000');
-			pin.setAttribute('stroke-width', '3.7');
+			pin.setAttribute('stroke-width', '2');
 			pin.setAttribute('stroke-miterlimit', '10');
 
 			circle.setAttribute('cx', '0');
 			circle.setAttribute('cy', '-63.757');
 			circle.setAttribute('r', '9.834');
+			circle.setAttribute('stroke', '#000000');
+			circle.setAttribute('stroke-width', '2');
+			circle.setAttribute('fill', 'white');
 
 			indicator.appendChild(pin);
 			indicator.appendChild(circle);

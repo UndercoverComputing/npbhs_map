@@ -2,19 +2,18 @@
 
 Demo: [skyris.me](https://skyris.me)
 
-## Progress: 80%
+## Progress: 85%
 
 ## TO DO:
 * More Classrooms
 * More Routes
-* Enhanced Search Menu
 * Multifloor Navigation
 * Navigate to nearest Toilets
 
 
 Made as part of the NCEA Level 3 Prototyping standard.
 
-### Inital Problem:
+### Initial Problem:
 New NPBHS Students have trouble finding their classes.
 
 ### Background:
