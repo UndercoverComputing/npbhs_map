@@ -13,6 +13,21 @@
 }
 */
 
+.optgroup > span.label {
+  font-weight: bold;
+  padding-left: 10px;
+}
+
+div.optgroup {
+  border-bottom: 2px;
+  border-color: black;
+}
+
+div.optgroup > li.option {
+  padding-left: 2em;
+
+}
+
 .nice-select {
   margin-left: 1em;
   -webkit-tap-highlight-color: transparent;
@@ -40,7 +55,8 @@
   -ms-user-select: none;
   user-select: none;
   white-space: nowrap;
-  width: 10em;
+  width: 12%;
+  min-width: 10em'
 }
 
 .nice-select:hover {
@@ -199,7 +215,7 @@
 }
 
 .nice-select.open .list {
-  max-height: 300px;
+  max-height: 50em;
   overflow-y: scroll;
 }
 

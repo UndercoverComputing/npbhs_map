@@ -49,14 +49,15 @@ $(document).ready(function() {
 
   $('select#beginSelect').change(function() {
     $('#myMaps').wayfinding('startpoint', $(this).val());
-    if ($('#endSelect').val() !== '') {
+    if ($('select#endSelect').val() !== null) {
       $('div#floor1').panzoom('reset');
       $('#myMaps').wayfinding('routeTo', $('#endSelect').val());
     }
   });
 
   $('select#endSelect').change(function() {
-    if ($('#beginSelect').val() !== '') {
+    console.log($(this).val())
+    if ($('select#beginSelect').val() !== null) {
     $('#myMaps').wayfinding('routeTo', $(this).val());
   };
   });
