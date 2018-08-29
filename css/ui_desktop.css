@@ -80,6 +80,7 @@
     border-radius: .25em;
     overflow: hidden;
     background: #fafafa;
+
   }
 
   select > option {
@@ -201,5 +202,10 @@
   #dropdown ul li a:hover {
     color: #6fa0e9;
     background: #e7f0f7;
+  }
+
+  .nice-select.open .list {
+    max-height: 50em;
+    overflow-y: scroll;
   }
 }

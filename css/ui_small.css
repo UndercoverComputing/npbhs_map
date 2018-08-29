@@ -159,6 +159,10 @@
    #dropdown ul li ,#dropdown > a {
     display: none;
   }
+  .nice-select.open .list {
+    max-height: 50vh;
+    overflow-y: scroll;
+  }
 }
 
 @media screen and (max-width: 320px) {
