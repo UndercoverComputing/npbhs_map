@@ -326,7 +326,7 @@
 			circle.setAttribute('r', '9.834');
 			circle.setAttribute('stroke', '#000000');
 			circle.setAttribute('stroke-width', '2');
-			circle.setAttribute('fill', 'white');
+			circle.setAttribute('fill', 'black');
 
 			indicator.appendChild(pin);
 			indicator.appendChild(circle);

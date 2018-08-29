@@ -56,7 +56,9 @@ $(document).ready(function() {
   });
 
   $('select#endSelect').change(function() {
+    if ($('#beginSelect').val() !== '') {
     $('#myMaps').wayfinding('routeTo', $(this).val());
+  };
   });
 
   /*$('#controls #accessible').change(function() {
