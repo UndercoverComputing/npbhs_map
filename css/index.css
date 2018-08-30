@@ -13,17 +13,17 @@
 }
 */
 
-.optgroup > span.label {
-  font-weight: bold;
+.optgroup > li.label {
+  font-family: "Rubik";
+  font-weight: 600;
   padding-left: 10px;
+  line-height: 1em;
+  margin-top: 0.5em;
 }
 
-div.optgroup {
-  border-bottom: 2px;
-  border-color: black;
-}
 
-div.optgroup > li.option {
+
+.optgroup > li.option {
   padding-left: 2em;
 
 }
@@ -38,8 +38,8 @@ div.optgroup > li.option {
   cursor: pointer;
   display: inline-block;
   float: left;
-  font-family: inherit;
-  font-size: 14px;
+  font-family: Roboto;
+  font-size: 1rem;
   font-weight: normal;
   height: 42px;
   line-height: 40px;
@@ -109,6 +109,7 @@ div.optgroup > li.option {
   border-color: #ededed;
   color: #999;
   pointer-events: none;
+  display: none;
 }
 
 .nice-select.disabled:after {
@@ -224,7 +225,6 @@ div.optgroup > li.option {
     top: 100%;
     border-top: 0;
     border-radius: 0.25em;
-    max-height: 210px;
     overflow-y: scroll;
     padding: 52px 0 0;
 }
