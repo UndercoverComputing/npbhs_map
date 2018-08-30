@@ -53,68 +53,7 @@
 	 * some code in place for this
 	 */
 
-	var defaults = {
-		/**
-		 * @typedef map
-		 * @memberOf wayfinding
-		 * @type object
-		 * @property {string} path relative URL to load the map from
-		 * @property {string} id the identifier by which the map is referenced by other maps
-		 */
-		'maps': [{'path': 'floorplan.svg', 'id': 'map.1'}],
-		/**
-		 * @typedef path
-		 * @memberOf wayfinding
-		 * @typedef {object}
-		 * @property {string} color any valid CSS color
-		 * @property {integer} radius the turn ration in pixels to apply to the solution path
-		 * @property {integer} speed the speed at which the solution path will be drawn
-		 * @property {integer} width the width in pixels of the solution path
-		 */
-		'path': {
-			color: 'red', // the color of the solution path that will be drawn
-			radius: 10, // the radius in pixels to apply to the solution path
-			speed: 8, // the speed at which the solution path with be drawn
-			width: 3 // the width of the solution path in pixels
-		},
-		// The door identifier for the default starting point
-		'startpoint': function () {
-			return 'startpoint';
-		},
-		// If specified in the wayfinding initialization
-		// route to this point as soon as the maps load. Can be initialized
-		// as a function or a string (for consistency with startpoint)
-		'endpoint': false,
-		// Controls routing through stairs
-		// if true return an accessible route
-		// if false return the shortest route possible
-		'accessibleRoute': false,
-		// Provides the identifier for the map that should be show at startup,
-		// if not given will default to showing first map in the array
-		'defaultMap': function () {
-			return 'map.1';
-		},
-		'loadMessage': 'Loading',
-		// should dataStoreCache should be used
-		// null is cache should not be used
-		// object if cache is being passed
-		// string representing url if it should be used
-		// string is URL path where filename to load will be in the form startpoint + '.json' or startpoint + '.acc.json'
-		'dataStoreCache': null,
-		// place marker for "you are here"
-		'showLocation': false,
-		//styling for the "you are here pin"
-		'locationIndicator': {
-			fill: 'red',
-			height: 40
-		},
-		'pinchToZoom': true, // requires jquery.panzoom
-		'zoomToRoute': true,
-		'zoomPadding': 25,
-		// milliseconds to wait during animation when a floor change occurs
-		'floorChangeAnimationDelay': 1250
-	},
-	dataStore;
+
 
 	// should array of arrays be looked into
 	// should floor only be stored by id?
