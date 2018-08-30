@@ -17,7 +17,7 @@
     font-size: 1em;
     font-weight: bold;
     text-align: center;
-    margin-bottom: 0.25em;
+    margin-bottom: 0;
   }
   .header a {
     float: left;
@@ -32,7 +32,7 @@
     border-radius: .25em;
     background-color: white;
     color: gray;
-    margin-right: 1em;
+    margin-right: 0;
     vertical-align: middle;
     user-select: none;
   }
@@ -119,8 +119,15 @@
   }
 
   div.nice-select.select-style {
-    margin-top: 1em; !important
+    margin-top: 0.75em; !important
   }
+
+  div.nice-select {
+    width: 25%;
+    min-width: 10em;
+    align-items: center;
+  }
+
   #dropdown i.material-icons, #dropdown ul li ,#dropdown > a {
     display: none;
   }
@@ -131,15 +138,25 @@
     padding: 2%;
   }
 
+  div#header.header {
+    padding-left: 0;
+    margin-left: 0;
+  }
+
+  .nice-select:active, .nice-select.open, .nice-select:focus, li.list {
+    top 0;
+  }
+
   .header a.logo {
     color: white;
     background-color: #4a80f5;
+    font-family: "Rubik";
     font-size: 1em;
-    font-weight: bold;
+    font-weight: 600;
     text-align: center;
     margin-bottom: 0.25em;
     width: 100%;
-    transform: translateX(-0.75em);
+    transform: translateX(-0.5em);
   }
   div.nice-select.select-style {
     margin-top: 0; !important
@@ -151,8 +168,9 @@
     padding-bottom: 0;
   }
   div.nice-select {
-    width: 42%; !important
+    width: 44% !important;
     align-items: center;
+    margin-left:calc(1em+ 10%);
   }
 
   #dropdown i.material-icons,
@@ -160,7 +178,7 @@
     display: none;
   }
   .nice-select.open .list {
-    max-height: 50vh;
+    max-height: 60vh;
     overflow-y: scroll;
   }
 }
