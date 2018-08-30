@@ -110,7 +110,7 @@ Made by Hernán Sartorio  */
           })
           .wrapAll('<div class="optgroup"/>')
           .parent()
-          .prepend('<span class="label">' + label + '</span>')
+          .prepend('<li class="label">' + label + '</li>')
       });
     }
 
@@ -128,8 +128,10 @@ Made by Hernán Sartorio  */
 
       if ($dropdown.hasClass('open')) {
         $dropdown.find('.option');
-        $dropdown.find('.nice-select-search').val('');
-        $dropdown.find('.nice-select-search').focus();
+        if ($(window).width() > 960) {
+          $dropdown.find('.nice-select-search').val('');
+          $dropdown.find('.nice-select-search').focus();
+        }
         $dropdown.find('.focus').removeClass('focus');
         $dropdown.find('.selected').addClass('focus');
         $dropdown.find('ul li').show();
@@ -151,6 +153,7 @@ Made by Hernán Sartorio  */
       else if ($self.hasClass('open')) {
         $text = $text.toLowerCase();
         var $matchReg = new RegExp($text);
+        console.log($options.length)
         if (0 < $options.length) {
           $options.each(function() {
             var $this = $(this);
