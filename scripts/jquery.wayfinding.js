@@ -94,7 +94,7 @@
 		'defaultMap': function () {
 			return 'map.1';
 		},
-		'loadMessage': 'Loading',
+		'loadMessage': 'Loading...',
 		// should dataStoreCache should be used
 		// null is cache should not be used
 		// object if cache is being passed

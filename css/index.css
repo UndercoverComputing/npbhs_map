@@ -13,6 +13,19 @@
 }
 */
 
+#WayfindingStatus {
+    position: fixed;
+    z-index: 1000;
+    top: 50%;
+    left: 50%;
+    font-family: "Rubik";
+    font-weight: 600;
+    font-size: 2em;
+    transform: translateX(-2em);
+    width: auto;
+    height: auto;
+}
+
 .optgroup > li.label {
   font-family: "Rubik";
   font-weight: 600;
