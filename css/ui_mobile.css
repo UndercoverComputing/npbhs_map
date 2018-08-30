@@ -1,6 +1,21 @@
 /*Mobile Interface w/ Touch Device Detection*/
 
 @media (hover:none), (hover:on-demand) {
+
+  #WayfindingStatus {
+      position: fixed;
+      z-index: 1000;
+      top: 40%;
+      left: 50%;
+      font-family: "Rubik";
+      font-weight: 600;
+      font-size: 1em;
+      transform: translateX(-2em);
+      transform: translateY(-2em);
+      width: auto;
+      height: auto;
+  }
+
   .header {
     width: 100%;
     position: fixed;
