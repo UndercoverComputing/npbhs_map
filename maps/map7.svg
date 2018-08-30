@@ -1,11 +1,13 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1635" height="1232.6568" viewBox="0 0 1635 1232.6568">
-  <title>map6</title>
+  <title>map7</title>
   <g id="Background">
     <rect width="1635" height="1106.509" fill="#e6e6e6"/>
     <path d="M399.3005,577.4224" transform="translate(117.875)" fill="#bbdaa4"/>
     <path d="M1137.7083,156.6662" transform="translate(117.875)" fill="#e6e6e6"/>
     <polyline points="283.167 722.85 283.167 727.75 361.333 727.75 361.536 722.818" fill="#bbdaa4"/>
     <rect width="1635" height="1232.6568" fill="#bbdaa4"/>
+    <polygon points="179.453 1105.083 117.875 1105.083 118.23 210.177 179.453 252.784 179.453 1105.083" fill="#b3b3b3"/>
+    <polygon points="148.564 230.722 118.222 230.722 117.89 25.083 147.083 25.083 148.564 230.722" fill="#b3b3b3"/>
   </g>
   <g id="Concrete">
     <g>
@@ -226,7 +228,7 @@
       <rect x="649.414" y="419.4474" width="11" height="11" transform="matrix(0.8665, -0.4992, 0.4992, 0.8665, -6.8207, 383.6995)" fill="#f2f2f2" stroke="#000" stroke-miterlimit="10"/>
     </g>
     <g id="Art_Engineering" data-name="Art/Engineering">
-      <polyline points="1201.648 183.627 1224.299 114.353 1231.384 116.613 1227.339 129.296 1245.798 135.184 1241.885 147.45 1223.426 141.562 1209.069 186.575" fill="#e6e6e6"/>
+      <polyline points="1201.648 183.627 1224.299 114.353 1231.384 116.613 1227.339 129.296 1245.798 135.184 1241.885 147.45 1223.426 141.562 1209.069 186.575" fill="#e6e6e6" stroke="#000" stroke-miterlimit="10" stroke-width="0.5"/>
       <rect x="1044.8279" y="137.9309" width="52.25" height="40.0345" transform="translate(712.8977 1130.2538) rotate(-72.3086)" fill="#fff" stroke="#000" stroke-miterlimit="10"/>
       <rect x="1068.946" y="110.9013" width="12.875" height="28.5625" transform="translate(747.198 1111.6664) rotate(-72.3086)" fill="#fff" stroke="#000" stroke-miterlimit="10"/>
       <rect x="1088.0166" y="125.5296" width="12.875" height="11.472" transform="matrix(0.3039, -0.9527, 0.9527, 0.3039, 754.6779, 1134.0696)" fill="#fff" stroke="#000" stroke-miterlimit="10"/>
@@ -237,6 +239,12 @@
       <rect x="1099.8286" y="155.2425" width="16.875" height="19.375" transform="translate(732.2202 1170.6624) rotate(-72.3086)" fill="#fff" stroke="#000" stroke-miterlimit="10"/>
       <rect x="1106.3054" y="141.0114" width="13" height="19.375" transform="translate(748.9382 1165.0807) rotate(-72.3086)" fill="#fff" stroke="#000" stroke-miterlimit="10"/>
       <rect x="1114.0598" y="116.2112" width="13.3125" height="19.375" transform="translate(778.0721 1155.3536) rotate(-72.3086)" fill="#fff" stroke="#000" stroke-miterlimit="10"/>
+      <line x1="1226.1411" y1="135.556" x2="1224.4792" y2="141.8982" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="0.5"/>
+      <line x1="1227.8669" y1="136.0801" x2="1226.1411" y2="142.4283" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="0.5"/>
+      <line x1="1229.7396" y1="136.8418" x2="1228.0777" y2="143.1841" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="0.5"/>
+      <line x1="1231.4654" y1="137.366" x2="1229.7396" y2="143.7142" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="0.5"/>
+      <line x1="1232.9662" y1="137.6484" x2="1231.3043" y2="143.9906" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="0.5"/>
+      <line x1="1234.6921" y1="138.1726" x2="1232.9662" y2="144.5207" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="0.5"/>
     </g>
     <g id="Eco_Geo" data-name="Eco/Geo">
       <rect x="1050.0188" y="297.6283" width="39.1667" height="32.8333" transform="translate(563.243 1237.6275) rotate(-72.3086)" fill="#fff" stroke="#000" stroke-miterlimit="10"/>
@@ -406,6 +414,11 @@
     <path d="M765.375,284.6427l57.0738-19.81s18.45-8.53,23.6762-21.5717l20.1075-47.6783s7.1556-24,16.0241-32L972.625,22.4162" transform="translate(117.875)" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="0.5"/>
     <path d="M766.375,263.5676l51.25-17.5787s18-5.406,20-16.406l13.117-29.75s13.633-39.4088,19.883-43.7044l87.25-135.7956" transform="translate(117.875)" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="0.5"/>
     <path d="M828.375,220l13.1875-28.6914s2.5625-19.7253,10.8125-29.4753l90.25-140.4165" transform="translate(117.875)" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="0.5"/>
+    <g id="Art_Engineering-2" data-name="Art/Engineering">
+      <line x1="1245.7976" y1="135.1841" x2="1241.885" y2="147.4502" fill="none" stroke="#000" stroke-miterlimit="10"/>
+      <line x1="1224.9167" y1="135.1841" x2="1235.8333" y2="138.4996" fill="none" stroke="#000" stroke-miterlimit="10"/>
+      <line x1="1227.3389" y1="129.2963" x2="1225.4158" y2="135.3357" fill="none" stroke="#000" stroke-miterlimit="10"/>
+    </g>
   </g>
   <g id="Doors">
     <line id="P6_1_" x1="335.5509" y1="223.0156" x2="334.9998" y2="219.1406" fill="#00a7e7" stroke="red" stroke-miterlimit="10"/>
@@ -498,7 +511,6 @@
     <line x1="1126.875" y1="260.2079" x2="1129.8897" y2="273.8959" fill="none" stroke="#ff0" stroke-miterlimit="10"/>
     <line x1="1126.875" y1="260.2079" x2="1119.125" y2="283.7079" fill="none" stroke="#ff0" stroke-miterlimit="10"/>
     <line x1="205.671" y1="759.9127" x2="205.4502" y2="727.2496" fill="none" stroke="#ff0" stroke-miterlimit="10"/>
-    <line x1="205.4502" y1="727.2496" x2="206.3333" y2="683.9162" fill="none" stroke="#ff0" stroke-miterlimit="10"/>
     <line x1="206.3333" y1="683.9162" x2="237.4743" y2="684.2496" fill="none" stroke="#ff0" stroke-miterlimit="10"/>
     <path d="M224.358,589.31" transform="translate(117.875)" fill="none" stroke="#ff0" stroke-miterlimit="10"/>
     <path d="M119.5993,684.25" transform="translate(117.875)" fill="none" stroke="#ff0" stroke-miterlimit="10"/>
@@ -611,7 +623,24 @@
     <line x1="322.6667" y1="578.8728" x2="335.531" y2="578.8728" fill="none" stroke="#ff0" stroke-miterlimit="10"/>
     <line x1="335.531" y1="578.8728" x2="342.233" y2="589.3102" fill="none" stroke="#ff0" stroke-miterlimit="10"/>
     <line x1="335.531" y1="578.8728" x2="356" y2="574.5084" fill="none" stroke="#ff0" stroke-miterlimit="10"/>
-    <line x1="322.6667" y1="578.8728" x2="323.3333" y2="551.0643" fill="none" stroke="#ff0" stroke-miterlimit="10"/>
+    <path d="M204.7917,578.8728" transform="translate(117.875)" fill="none" stroke="#ff0" stroke-miterlimit="10"/>
     <line x1="237.4743" y1="684.2496" x2="342.233" y2="684.0829" fill="none" stroke="#ff0" stroke-miterlimit="10"/>
+    <polygon points="1373 114.353 1403.75 125.899 1387 177.583 1355.5 167.23 1373 114.353" fill="#fff" stroke="#000" stroke-miterlimit="10"/>
+    <line x1="237.4743" y1="684.2496" x2="256.9116" y2="649.7717" fill="none" stroke="#ff0" stroke-miterlimit="10"/>
+    <line x1="256.9116" y1="649.7717" x2="256.9116" y2="578.8728" fill="none" stroke="#ff0" stroke-miterlimit="10"/>
+    <line x1="300.5" y1="578.8728" x2="256.9116" y2="578.8728" fill="none" stroke="#ff0" stroke-miterlimit="10"/>
+    <line x1="256.9116" y1="578.8728" x2="241.8811" y2="500.8051" fill="none" stroke="#ff0" stroke-miterlimit="10"/>
+    <line x1="241.8811" y1="500.8051" x2="136" y2="451.2496" fill="none" stroke="#ff0" stroke-miterlimit="10"/>
+    <line x1="136" y1="451.2496" x2="136.5" y2="286.468" fill="none" stroke="#ff0" stroke-miterlimit="10"/>
+    <line x1="136.5" y1="286.468" x2="215.2501" y2="260.0586" fill="none" stroke="#ff0" stroke-miterlimit="10"/>
+    <line x1="215.2501" y1="260.0586" x2="222.5" y2="226.646" fill="none" stroke="#ff0" stroke-miterlimit="10"/>
+    <line x1="222.5" y1="226.646" x2="242.1446" y2="226.646" fill="none" stroke="#ff0" stroke-miterlimit="10"/>
+    <line x1="242.1446" y1="226.646" x2="248.375" y2="216.0408" fill="none" stroke="#ff0" stroke-miterlimit="10"/>
+    <line x1="206.3333" y1="683.9162" x2="205.671" y2="705.9162" fill="none" stroke="#ff0" stroke-miterlimit="10"/>
+    <line x1="205.4502" y1="727.2496" x2="205.671" y2="705.9162" fill="none" stroke="#ff0" stroke-miterlimit="10"/>
+    <line x1="205.671" y1="705.9162" x2="150" y2="707.3329" fill="none" stroke="#ff0" stroke-miterlimit="10"/>
+    <line x1="150" y1="707.3329" x2="136.5" y2="654.2104" fill="none" stroke="#ff0" stroke-miterlimit="10"/>
+    <line x1="136.5" y1="654.2104" x2="136" y2="451.2496" fill="none" stroke="#ff0" stroke-miterlimit="10"/>
+    <line x1="323.3333" y1="551.0643" x2="322.6667" y2="578.8728" fill="none" stroke="#ff0" stroke-miterlimit="10"/>
   </g>
 </svg>
