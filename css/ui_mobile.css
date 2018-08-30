@@ -5,11 +5,11 @@
   #WayfindingStatus {
       position: fixed;
       z-index: 1000;
-      top: 40%;
+      top: 30% !important;
       left: 50%;
       font-family: "Rubik";
       font-weight: 600;
-      font-size: 1em;
+      font-size: 1em !important;
       transform: translateX(-2em);
       transform: translateY(-2em);
       width: auto;
