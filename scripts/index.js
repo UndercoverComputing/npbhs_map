@@ -2,13 +2,13 @@ $(document).ready(function() {
   'use strict';
   $('#myMaps').wayfinding({
       'maps': [{
-        'path': 'maps/map6.svg',
+        'path': 'maps/map7.svg',
         'id': 'floor1'
       }, ],
       'path': {
         width: 5,
         color: 'Red',
-        radius: 5,
+        radius: 7,
         speed: 4
       },
       'defaultMap': 'floor1',
