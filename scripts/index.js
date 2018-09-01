@@ -31,7 +31,6 @@ $(document).ready(function() {
 
   $("#dropdown").on("click", function(e) {
     e.preventDefault();
-
     if ($(this).hasClass("open")) {
       $(this).removeClass("open");
       $(this).children("ul").slideUp("fast");
@@ -58,8 +57,8 @@ $(document).ready(function() {
   $('select#endSelect').change(function() {
     console.log($(this).val())
     if ($('select#beginSelect').val() !== null) {
-    $('#myMaps').wayfinding('routeTo', $(this).val());
-  };
+      $('#myMaps').wayfinding('routeTo', $(this).val());
+    };
   });
 
   /*$('#controls #accessible').change(function() {
@@ -172,15 +171,6 @@ $(document).ready(function() {
     });
   });
 
-  let deferredPrompt;
-
-  window.addEventListener('beforeinstallprompt', (e) => {
-    // Prevent Chrome 67 and earlier from automatically showing the prompt
-    e.preventDefault();
-    // Stash the event so it can be triggered later.
-    deferredPrompt = e;
-  });
-
   if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('service-worker.js').then(function() {
       console.log("Service Worker Registered");
@@ -204,12 +194,4 @@ $(document).ready(function() {
 
 $(document).ready(function() {
   $('select').niceSelect();
-
-  /*$(document).on('click.nice_select', '.nice-select', function(event) {
-    if ($(".quick-select-mobile").css('display') != "none") {
-      console.log("Mobile")
-      $("a#header_logo.logo").css({'transform' : 'translateY(-2em)'})
-    }
   });
-  */
-});

@@ -178,7 +178,7 @@
     display: none;
   }
   .nice-select.open .list {
-    max-height: 60vh;
+    max-height: 57vh;
     overflow-y: scroll;
   }
 }

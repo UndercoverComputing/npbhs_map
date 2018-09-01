@@ -211,7 +211,8 @@
 }
 
 .nice-select .option.selected {
-  font-weight: bold;
+  font-family: "Rubik";
+  font-weight: 600;
 }
 
 .nice-select .option.disabled {
