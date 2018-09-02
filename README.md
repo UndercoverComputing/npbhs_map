@@ -4,6 +4,8 @@ Demo: [skyris.me](https://skyris.me)
 
 ## Progress: 85%
 
+Now added the .ai Illustrator file for map editing.
+
 ## TO DO:
 * More Classrooms
 * More Routes
