@@ -194,7 +194,9 @@ $(document).ready(function() {
     });
   });
 
-
+  $('#view-github').click(function() {
+   window.open('https://github.com/007joshie/npbhs_map');   
+  });
 
 });
 
