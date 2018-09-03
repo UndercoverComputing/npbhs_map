@@ -929,8 +929,10 @@
 			el.panzoom({
 				minScale: 0.7,
         maxScale:5,
+				linearZoom: true,
 				contain: false,
-				cursor: 'move'
+				cursor: 'move',
+
 			});
 
 			// Allow clicking on links within the SVG despite $.panZoom()
