@@ -85,70 +85,58 @@ $(document).ready(function() {
     $('div#floor1').panzoom('reset')
   });
 
-  $('a#qs-ryder').on("click", function() {
-    $('div#floor1').panzoom('reset');
-    $("div#floor1").panzoom("pan", 600, -500, {
-      relative: false,
-      animate: true
+  $('a#qs-ryder').on("click", function(e) {
+    e.preventDefault();
+    var pos = $("line#Ryder").position()
+    $('div#floor1').panzoom("pan",600,-370, {animate: true})
+    $('div#floor1').panzoom('zoom',1, {
+      animate: true,
+      focal: {
+        clientX: pos.left,
+        clientY: pos.top
+      }
     });
+    $('#myMaps').wayfinding('startpoint', 'Ryder');
   });
 
-  $('a#qs-pridham').on("click", function() {
-    $('div#floor1').panzoom('reset');
-    $('div#floor1').panzoom('zoom', 1.5);
-    $("div#floor1").panzoom("pan", 1000, 700, {
-      relative: false,
-      animate: true
+  $('a#qs-pridham').on("click", function(e) {
+    e.preventDefault();
+    var pos = $("g#Pridham-2").position()
+    $('div#floor1').panzoom("pan",600,270, {animate: true})
+    $('div#floor1').panzoom('zoom',1, {
+      animate: true,
+      focal: {
+        clientX: pos.left,
+        clientY: pos.top
+      }
     });
     $('#myMaps').wayfinding('startpoint', 'P6');
   });
 
   $('a#qs-gym').on("click", function() {
-    $('div#floor1').panzoom('reset');
-    $('div#floor1').panzoom('zoom', 1.5);
-    $("div#floor1").panzoom("pan", -650, 150, {
+    var pos = $("g#Gym")[0].getBBox();
+    var x = -(pos.x /4)
+    var y = -(pos.y /4)
+    $("div#floor1").panzoom("pan",x,y, {
       relative: false,
       animate: true
     });
     $('#myMaps').wayfinding('startpoint', 'Gym');
   });
 
-  $('a#qs-ryder').on("click", function() {
-    $('div#floor1').panzoom('reset');
-    $("div#floor1").panzoom("pan", 600, -500, {
-      relative: false,
-      animate: true,
-    });
-    $('#myMaps').wayfinding('startpoint', 'Ryder');
-  });
 
   $('a#mqs-ryder').on("click", function() {
-    $('div#floor1').panzoom('reset');
-    $('div#floor1').panzoom('zoom', 3.2);
-    $("div#floor1").panzoom("pan", 460, 575, {
-      relative: false,
-      animate: true
-    });
+    $('div#floor1').panzoom("setMatrix", ["1.49535", "0", "0", "1.49535", "143.2", "-4.339"], {animate: true})
     $('#myMaps').wayfinding('startpoint', 'Ryder');
   });
 
   $('a#mqs-pridham').on("click", function() {
-    $('div#floor1').panzoom('reset');
-    $('div#floor1').panzoom('zoom', 3);
-    $("div#floor1").panzoom("pan", 400, 950, {
-      relative: false,
-      animate: true
-    });
+    $('div#floor1').panzoom("setMatrix",  ["1.49535", "0", "0", "1.49535", "131.2", "167.661"], {animate: true})
     $('#myMaps').wayfinding('startpoint', 'P6');
   });
 
   $('a#mqs-gym').on("click", function() {
-    $('div#floor1').panzoom('reset');
-    $('div#floor1').panzoom('zoom', 3);
-    $("div#floor1").panzoom("pan", -300, 750, {
-      relative: false,
-      animate: true
-    });
+    $('div#floor1').panzoom("setMatrix", ["1.49535", "0", "0", "1.49535", "-201.8", "108.661"], {animate: true})
     $('#myMaps').wayfinding('startpoint', 'Gym');
   });
 
@@ -158,12 +146,14 @@ $(document).ready(function() {
         clientX: (window.innerWidth / 2),
         clientY: (window.innerHeight / 2)
       },
-      increment: 0.2,
+      increment: 0.3,
     });
   });
 
   $('i#zoom_out.material-icons').on("click", function() {
     $('div#floor1').panzoom('zoom', true, {
+      linearZoom: true,
+      increment: 0.3,
       focal: {
         clientX: (window.innerWidth / 2),
         clientY: (window.innerHeight / 2)
