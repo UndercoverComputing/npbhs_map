@@ -2,6 +2,9 @@
 
 Demo: [skyris.me](https://skyris.me)
 
+Supports Queries:
+https://skyris.me/?start=Gym&end=Toilet
+
 ## Progress: 85%
 
 Now added the .ai Illustrator file for map editing.
