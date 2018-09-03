@@ -189,9 +189,25 @@ $(document).ready(function() {
     window.location.reload()
   });
 
+  $("#content").on('wheel', function(e) {
+    e.preventDefault();
+    var delta = e.delta || e.originalEvent.wheelDelta;
+    var zoomOut = delta ? delta < 0 : e.originalEvent.deltaY > 0;
+    $("div#floor1").panzoom('zoom', zoomOut, {
+      increment: 0.1,
+      focal: {
+        clientX: (window.innerWidth / 2),
+        clientY: (window.innerHeight / 2)
+      },
+      animate: false,
+      exponential: false
+    });
+  });
+
+
 
 });
 
 $(document).ready(function() {
   $('select').niceSelect();
-  });
+});
