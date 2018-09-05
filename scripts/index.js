@@ -61,18 +61,6 @@ $(document).ready(function() {
     };
   });
 
-  /*$('#controls #accessible').change(function() {
-    if ($('#accessible:checked').val() !== undefined) {
-      $('#myMaps').wayfinding('accessibleRoute', true);
-    } else {
-      $('#myMaps').wayfinding('accessibleRoute', false);
-    }
-    if ($('#endSelect').val() !== '') {
-      $('#myMaps').wayfinding('routeTo', $('#endSelect').val());
-    }
-  });*/
-
-
   $('#myMaps').on('wayfinding:roomClicked', function(e, r) {
     $('#endSelect option[value="' + r.roomId + '"]').attr('selected', true);
   });
