@@ -836,13 +836,13 @@
 			height = Math.ceil(height / 2) * 2;
 			width = Math.ceil(width / 2) * 2;
 
-			// if ($(el).css('padding-bottom') === '' || $(el).css('padding-bottom') === '0px') {
+		 if ($(el).css('padding-bottom') === '' || $(el).css('padding-bottom') === '0px') {
 				$(el).css('padding-bottom', (100 * (height / width)) + '%');
 
 				svg.attr('height', '100%')
 					.attr('width', '100%')
 					.attr('preserveAspectRatio', 'xMinYMin meet');
-			// }
+			}
 
 			// clean up after illustrator -> svg issues
 			$('#Rooms a, #Doors line', el).each(function () {

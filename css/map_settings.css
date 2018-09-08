@@ -52,12 +52,16 @@ body {
 	#myMaps div {
 	  height: 100%;
 	  padding-left: 0;
-		padding-top: 30%;
-	  display: inline-block;
+		padding-top: 40%;
+	  display: relative;
 	  margin: auto;
-	  width: 120%;
+	  width: 160%;
 	  align-self: center;
 	}
+  g.startPin path {
+    fill: #64dd17;
+    height: 200px;
+  }
 }
 
 #controls {
