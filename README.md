@@ -1,4 +1,4 @@
-# NPBHS Map
+# NPBHS Map - On Hold
 
 Demo: [skyris.me](https://skyris.me)
 
