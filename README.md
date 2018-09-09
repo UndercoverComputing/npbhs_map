@@ -2,7 +2,7 @@
 
 Demo: [skyris.me](https://skyris.me)
 
-## Progress: 85%
+## Progress: 85% -- Not Actively Developing
 
 Now added the .ai Illustrator file for map editing.
 
