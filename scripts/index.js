@@ -207,6 +207,6 @@ $(document).ready(function() {
 
 $(document).ready(function() {
   if (/MSIE (\d+\.\d+);/.test(navigator.userAgent) || navigator.userAgent.indexOf("Trident/") > -1) {
-
+      alert("NPBHS Map Does not work in Internet Explorer. Instead, Please use Chrome!")
   }
 });
