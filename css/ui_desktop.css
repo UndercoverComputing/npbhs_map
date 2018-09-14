@@ -72,7 +72,7 @@
   .quick-select-mobile {
     display: none;
   }
-  select#beginSelect.select-style {
+  select.select-style {
     border: .1em solid #ccc;
     height: auto;
     padding-left: 1em;
@@ -90,7 +90,7 @@
   select > option {
     border-radius: .25em;
     margin-top: .5em;
-    color: red;
+    color: black;
     padding-left: 1em;
     padding-right: 1em;
     padding-top: 0.5rem;
