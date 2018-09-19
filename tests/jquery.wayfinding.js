@@ -767,8 +767,13 @@
 
 			if (options.showLocation) {
 				end = $('#Doors #' + escapeSelector(endPoint), el);
+				console.log(end)
 
-				attachPinLocation = $('svg').has('#Rooms a[id="' + escapeSelector(endPoint) + '"]');
+				//attachPinLocation = $('svg').has('#Rooms a[id="' + escapeSelector(endPoint) + '"]');
+
+				var endMap = el.children().has($('#' + escapeSelector(endPoint)));
+        attachPinLocation = $('svg', endMap).children().first();
+
 				if (end.length) {
 					x = (Number(end.attr('x1')) + Number(end.attr('x2'))) / 2;
 					y = (Number(end.attr('y1')) + Number(end.attr('y2'))) / 2;
