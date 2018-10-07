@@ -198,6 +198,10 @@ $(document).ready(function() {
   $('a#view-github').click(function() {
     window.location.href = 'https://github.com/007joshie/npbhs_map';
   });
+  
+  $('a#view-docs').click(function() {
+    window.location.href = 'https://007joshie.github.io/npbhs_map_docs/';
+  });
 
 });
 
