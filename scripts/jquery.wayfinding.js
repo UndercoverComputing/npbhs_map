@@ -1523,7 +1523,9 @@
 			$('#WayfindingStatus').remove();
 			$("div.fullscreenDiv").fadeOut("slow", function(){
     		$('div.fullscreenDiv').remove();
-				$('div.lds-ellipsis').remove();
+			});
+			$("div.lds-ellipsis").fadeOut("slow", function(){
+    		$('div.lds-ellipsis').remove();
 			});
 
 			// loop ensures defaultMap is in fact one of the maps
@@ -1567,9 +1569,14 @@
 						console.log(status)
 						if (status === 'error') {
 							setTimeout(function() {
-     						$('.logo-loading').text("Error! Please use Web Server!")
-								$('div.lds-ellipsis').remove()
+								$(".logo-loading").fadeOut("slow", function(){
+									$('.logo-loading').text("Error! Please use Web Server!")
+								});
+								$('div.lds-ellipsis').fadeOut("slow")
+								$('.logo-loading').removeClass('breathe')
+								$(".logo-loading").fadeIn("slow")
     					}, 3000);
+
 							maps[i].el = svgDiv;
 						} else {
 							maps[i].svgHandle = svg;

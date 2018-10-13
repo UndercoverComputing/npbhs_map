@@ -108,7 +108,10 @@ g.destinationPin path {
 }
 
 .fullscreenDiv {
-    background-color: #4a80f5;
+  background-image:radial-gradient(
+    #4a80f5,
+    #2e6bf2
+  );
     width: 100%;
     height: auto;
     bottom: 0px;
@@ -120,11 +123,21 @@ g.destinationPin path {
 
 .logo-loading {
   color: white;
-  background-color: #4a80f5;
-  font-size: 1.5rem;
+  font-size: 1.5em;
   font-weight: bold;
   user-select: none;
 }
+
+.breathe {
+  animation: flickerAnimation 1.5s infinite;
+}
+
+@keyframes flickerAnimation {
+  0%   { opacity:1; }
+  50%  { opacity:0.75; }
+  100% { opacity:1; }
+}
+
 
 .center {
     position: absolute;
