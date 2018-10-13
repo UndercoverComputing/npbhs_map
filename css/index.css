@@ -2,6 +2,7 @@
 
 @import url('https://fonts.googleapis.com/css?family=Rubik');
 @import url('https://fonts.googleapis.com/css?family=Roboto');
+/*@import url('https://fonts.googleapis.com/css?family=Karla');*/
 @import url('map_settings.css');
 @import url('ui_mobile.css');
 @import url('ui_small.css');
@@ -69,7 +70,6 @@
   user-select: none;
   white-space: nowrap;
   width: 12%;
-  min-width: 10em;
 }
 
 .nice-select:hover {

@@ -157,19 +157,13 @@
     width: 100%;
     transform: translateX(-0.5em);
   }
-  div.nice-select.select-style {
-    margin-top: 0; !important
-    margin-left: 1%; !important
-    margin-right: 1%; !important
-  }
   .header a {
     padding-top: 0;
     padding-bottom: 0;
   }
   div.nice-select {
-    width: 47% !important;
-    align-items: center;
-    margin-left:calc(1em+ 10%);
+    width: 45% !important;
+    margin-left: 3% !important;
   }
 
   #dropdown i.material-icons,
