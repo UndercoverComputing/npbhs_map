@@ -123,9 +123,11 @@ g.destinationPin path {
 
 .logo-loading {
   color: white;
-  font-size: 1.5em;
-  font-weight: bold;
+  font-size: 1em;
+  font-family: "Rubik";
+  font-weight: 600;
   user-select: none;
+  left: 50%;
 }
 
 .breathe {
@@ -146,7 +148,9 @@ g.destinationPin path {
     margin-right: -50%;
     transform: translate(-50%, -50%);
     z-index: 2000;
-    margin: 0;
+    width: auto;
+    padding: 1em;
+    text-align: center;
 }
 
 .lds-ellipsis {

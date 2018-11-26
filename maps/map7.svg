@@ -1,5 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1635" height="1232.6568" viewBox="0 0 1635 1232.6568">
   <title>map7</title>
+  <defs>
+    <filter id="shadow">
+    <feDropShadow dx="0" dy="0" stdDeviation="4" flood-color="black" flood-opacity="0.8" />
+    </filter>
+  </defs>
   <g id="Background">
     <rect width="1635" height="1106.509" fill="#e6e6e6"/>
     <path d="M399.3005,577.4224" transform="translate(117.875)" fill="#bbdaa4"/>

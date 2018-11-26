@@ -1147,6 +1147,7 @@
 			svg = $('#' + maps[mapIdx].id + ' svg')[0];
 
 			drawLength = drawing[drawingSegment].routeLength;
+			console.log("Length:",drawLength)
 			animationDuration = drawLength * options.path.speed;
 
 			switchFloor(maps[drawing[drawingSegment][0].floor].id, obj);
@@ -1477,10 +1478,13 @@
 						});
 
 						newPath = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+
 						newPath.setAttribute('d', path);
 						newPath.style.fill = 'none';
-
+						newPath.style.filter = 'url(#shadow)';
+//fffffffffffffffffffffffffffff
 						if (newPath.classList) {
+							console.log("True")
 							newPath.classList.add('directionPath' + j);
 						} else {
 							newPath.setAttribute('class', 'directionPath' + j);

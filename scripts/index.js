@@ -153,7 +153,7 @@ $(document).ready(function() {
 
   $('i#zoom_out.material-icons').on("click", function() {
     $('div#floor1').panzoom('zoom', true, {
-      linearZoom: true,
+      linearZoom: false,
       increment: 0.3,
       focal: {
         clientX: (window.innerWidth / 2),
@@ -202,6 +202,7 @@ $(document).ready(function() {
   $('a#view-docs').click(function() {
     window.location.href = 'https://007joshie.github.io/npbhs_map_docs/';
   });
+
 
 });
 
