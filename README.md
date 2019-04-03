@@ -1,21 +1,16 @@
-# NPBHS Map - On Hold
+# NPBHS Map - Archieved (For Now)
 
-Demo: [skyris.me](https://skyris.me)
-
-Supports Queries:
-https://skyris.me/?start=Gym&end=Toilet
-
-## Progress: 85%
-
-Now added the .ai Illustrator file for map editing.
-
-## TO DO:
+## Planned Revisions (as of April 2019):
 * More Classrooms
 * More Routes
 * Multifloor Navigation
+* Pre-calculated routes (Serverside)
+* GPS Navigation
+* New layout with rotation
+* Classroom / Building Labels (Based on zoom level)
+* Tiled rendering 
 
-
-Made as part of the NCEA Level 3 Prototyping standard.
+Made as part of the NCEA Level 3 (2018) Prototyping standard.
 
 ### Initial Problem:
 New NPBHS Students have trouble finding their classes.
