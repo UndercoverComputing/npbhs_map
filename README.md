@@ -1,5 +1,11 @@
 # NPBHS Map - Archieved (For Now)
 
+ALPHA v.9 is still avaliable to view:
+https://007joshie.github.io/npbhs_map/
+
+Only the proof of concept is shown. Basic single floor navigation, pan zoom functionality.
+
+
 ## Planned Revisions (as of April 2019):
 * More Classrooms
 * More Routes
