@@ -45,10 +45,20 @@
     padding-bottom: 0.1%;
     user-select: none;
   }
-  .header a:hover {
+  .header a.logo:hover {
+    background-color: white;
+    color: #4a80f5;
+  }
+
+  .header a.logo:active {
+    background-color: #d6e4f9;
+    color: grey;
+  }
+  .header div.quick-select a:hover {
     background-color: #ddd;
     color: black;
   }
+
   .quick-select {
     float: right;
     transform: translateX(-2.5em);

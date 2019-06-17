@@ -12,13 +12,13 @@ self.addEventListener('install', e => {
         '/css/ui_small.css',
         '/images/baseline_place_white_36dp.png',
         '/images/NPBHS-Logo.png',
-        '/maps/map1.svg',
-        '/maps/map2.svg',
+        '/maps/map7.svg',
         '/scripts/index.js',
         '/scripts/jquery-3.3.1.min.js',
         '/scripts/jquery.nice-select.js',
         '/scripts/jquery.panzoom.js',
         '/scripts/jquery.wayfinding.js',
+        '/scripts/urlquery.js'
       ])
           .then(() => self.skipWaiting());
     })

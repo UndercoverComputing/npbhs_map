@@ -61,18 +61,6 @@ $(document).ready(function() {
     };
   });
 
-  /*$('#controls #accessible').change(function() {
-    if ($('#accessible:checked').val() !== undefined) {
-      $('#myMaps').wayfinding('accessibleRoute', true);
-    } else {
-      $('#myMaps').wayfinding('accessibleRoute', false);
-    }
-    if ($('#endSelect').val() !== '') {
-      $('#myMaps').wayfinding('routeTo', $('#endSelect').val());
-    }
-  });*/
-
-
   $('#myMaps').on('wayfinding:roomClicked', function(e, r) {
     $('#endSelect option[value="' + r.roomId + '"]').attr('selected', true);
   });
@@ -97,6 +85,7 @@ $(document).ready(function() {
       }
     });
     $('#myMaps').wayfinding('startpoint', 'Ryder');
+    $('select#endSelect').val('Ryder').niceSelect('update');
   });
 
   $('a#qs-pridham').on("click", function(e) {
@@ -111,6 +100,7 @@ $(document).ready(function() {
       }
     });
     $('#myMaps').wayfinding('startpoint', 'P6');
+    $('select#endSelect').val('P6').niceSelect('update');
   });
 
   $('a#qs-gym').on("click", function() {
@@ -122,22 +112,26 @@ $(document).ready(function() {
       animate: true
     });
     $('#myMaps').wayfinding('startpoint', 'Gym');
+    $('select#endSelect').val('Gym').niceSelect('update');
   });
 
 
   $('a#mqs-ryder').on("click", function() {
     $('div#floor1').panzoom("setMatrix", ["1.49535", "0", "0", "1.49535", "143.2", "-4.339"], {animate: true})
     $('#myMaps').wayfinding('startpoint', 'Ryder');
+    $('select#endSelect').val('Ryder').niceSelect('update');
   });
 
   $('a#mqs-pridham').on("click", function() {
     $('div#floor1').panzoom("setMatrix",  ["1.49535", "0", "0", "1.49535", "131.2", "167.661"], {animate: true})
     $('#myMaps').wayfinding('startpoint', 'P6');
+    $('select#endSelect').val('P6').niceSelect('update');
   });
 
   $('a#mqs-gym').on("click", function() {
     $('div#floor1').panzoom("setMatrix", ["1.49535", "0", "0", "1.49535", "-201.8", "108.661"], {animate: true})
     $('#myMaps').wayfinding('startpoint', 'Gym');
+    $('select#endSelect').val('Gym').niceSelect('update');
   });
 
   $('i#zoom_in.material-icons').on("click", function() {
