@@ -15,7 +15,7 @@
     color: white;
     background-color: #4a80f5;
     font-size: 1em;
-    font-weight: bold;
+    font-weight: 600;
     text-align: center;
     margin-bottom: 0;
   }
@@ -78,7 +78,7 @@
     background-color: #4a80f5;
     font-size: 0.5em;
     font-family: 'Rubik', sans-serif;
-    font-weight: bold;
+    font-weight: 600;
     margin-left: 0;
     margin-right: 0;
     padding-left: 0.1em;
@@ -111,7 +111,7 @@
     color: white;
     background-color: #4a80f5;
     font-size: 2em; !important
-    font-weight: bold;
+    font-weight: 600;
   }
   div.zoom_controller > i:active {
     color: gray;
@@ -119,12 +119,11 @@
   }
 
   div.nice-select.select-style {
-    margin-top: 0.75em; !important
+    margin-top: 0 !important;
   }
 
   div.nice-select {
     width: 25%;
-    min-width: 10em;
     align-items: center;
   }
 
@@ -158,19 +157,13 @@
     width: 100%;
     transform: translateX(-0.5em);
   }
-  div.nice-select.select-style {
-    margin-top: 0; !important
-    margin-left: 1%; !important
-    margin-right: 1%; !important
-  }
   .header a {
     padding-top: 0;
     padding-bottom: 0;
   }
   div.nice-select {
-    width: 44% !important;
-    align-items: center;
-    margin-left:calc(1em+ 10%);
+    width: 45% !important;
+    margin-left: 3% !important;
   }
 
   #dropdown i.material-icons,

@@ -260,7 +260,7 @@
 			status = $(el).find('div')
 				.hide()
 				.end()
-				.append('<div id="WayfindingStatus" style="">' + options.loadMessage + '</div>');
+				.append('<div class="loader">Loading...</div>');
 
 			if (maps.length > 0) {
 				for (mapNum = 0; mapNum < maps.length; mapNum++) {
@@ -332,6 +332,7 @@
 			indicator.appendChild(circle);
 
 			indicator.setAttribute('transform', 'translate(' + x + ' ' + (y - 10 * (height / 125)) + ') scale(' + height / 125 + ')');
+			console.log(x,"\n",(y - 10 * (height / 125)))
 
 			return indicator;
 
@@ -1146,6 +1147,7 @@
 			svg = $('#' + maps[mapIdx].id + ' svg')[0];
 
 			drawLength = drawing[drawingSegment].routeLength;
+			console.log("Length:",drawLength)
 			animationDuration = drawLength * options.path.speed;
 
 			switchFloor(maps[drawing[drawingSegment][0].floor].id, obj);
@@ -1476,10 +1478,13 @@
 						});
 
 						newPath = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+
 						newPath.setAttribute('d', path);
 						newPath.style.fill = 'none';
-
+						newPath.style.filter = 'url(#shadow)';
+//fffffffffffffffffffffffffffff
 						if (newPath.classList) {
+							console.log("True")
 							newPath.classList.add('directionPath' + j);
 						} else {
 							newPath.setAttribute('class', 'directionPath' + j);
@@ -1520,6 +1525,12 @@
 				mapNum;
 
 			$('#WayfindingStatus').remove();
+			$("div.fullscreenDiv").fadeOut("slow", function(){
+    		$('div.fullscreenDiv').remove();
+			});
+			$("div.lds-ellipsis").fadeOut("slow", function(){
+    		$('div.lds-ellipsis').remove();
+			});
 
 			// loop ensures defaultMap is in fact one of the maps
 			displayNum = 0;
@@ -1559,9 +1570,17 @@
 				svgDiv.load(
 					map.path,
 					function (svg, status) {
+						console.log(status)
 						if (status === 'error') {
-							svgDiv.html('<p class="text-center text-danger">Map ' + i + ' Was not found at ' +
-								map.path + '<br />Please upload it in the administration section</p>');
+							setTimeout(function() {
+								$(".logo-loading").fadeOut("slow", function(){
+									$('.logo-loading').text("Error! Please use Web Server!")
+								});
+								$('div.lds-ellipsis').fadeOut("slow")
+								$('.logo-loading').removeClass('breathe')
+								$(".logo-loading").fadeIn("slow")
+    					}, 3000);
+
 							maps[i].el = svgDiv;
 						} else {
 							maps[i].svgHandle = svg;

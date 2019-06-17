@@ -1,7 +1,9 @@
-# NPBHS Map
+# NPBHS Map - Archieved (For Now)
 
-Demo: [skyris.me](https://skyris.me)
+ALPHA v.9 is still avaliable to view:
+https://007joshie.github.io/npbhs_map/
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 ## Progress: 85% -- Not Actively Developing
 =======
@@ -10,16 +12,22 @@ https://skyris.me/?start=Gym&end=Toilet
 
 ## Progress: 85%
 >>>>>>> 155ce67cc3a7cad8c99f6a3cea59b0a0a65a4362
+=======
+Only the proof of concept is shown. Basic single floor navigation, pan zoom functionality.
 
-Now added the .ai Illustrator file for map editing.
+>>>>>>> aca48b135cfd038811232728fa04abfcdca2f254
 
-## TO DO:
+## Planned Revisions (as of April 2019):
 * More Classrooms
 * More Routes
 * Multifloor Navigation
+* Pre-calculated routes (Serverside)
+* GPS Navigation
+* New layout with rotation
+* Classroom / Building Labels (Based on zoom level)
+* Tiled rendering 
 
-
-Made as part of the NCEA Level 3 Prototyping standard.
+Made as part of the NCEA Level 3 (2018) Prototyping standard.
 
 ### Initial Problem:
 New NPBHS Students have trouble finding their classes.

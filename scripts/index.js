@@ -65,9 +65,6 @@ $(document).ready(function() {
     $('#endSelect option[value="' + r.roomId + '"]').attr('selected', true);
   });
 
-  $('#zoom').on("click", function() {
-    $('div#floor1').panzoom('zoom')
-  });
 
   $('.logo').on("click", function() {
     $('div#floor1').panzoom('reset')
@@ -76,8 +73,10 @@ $(document).ready(function() {
   $('a#qs-ryder').on("click", function(e) {
     e.preventDefault();
     var pos = $("line#Ryder").position()
-    $('div#floor1').panzoom("pan",600,-370, {animate: true})
-    $('div#floor1').panzoom('zoom',1, {
+    $('div#floor1').panzoom("pan", 600, -370, {
+      animate: true
+    })
+    $('div#floor1').panzoom('zoom', 1, {
       animate: true,
       focal: {
         clientX: pos.left,
@@ -91,8 +90,10 @@ $(document).ready(function() {
   $('a#qs-pridham').on("click", function(e) {
     e.preventDefault();
     var pos = $("g#Pridham-2").position()
-    $('div#floor1').panzoom("pan",600,270, {animate: true})
-    $('div#floor1').panzoom('zoom',1, {
+    $('div#floor1').panzoom("pan", 600, 270, {
+      animate: true
+    })
+    $('div#floor1').panzoom('zoom', 1, {
       animate: true,
       focal: {
         clientX: pos.left,
@@ -105,9 +106,9 @@ $(document).ready(function() {
 
   $('a#qs-gym').on("click", function() {
     var pos = $("g#Gym")[0].getBBox();
-    var x = -(pos.x /4)
-    var y = -(pos.y /4)
-    $("div#floor1").panzoom("pan",x,y, {
+    var x = -(pos.x / 4)
+    var y = -(pos.y / 4)
+    $("div#floor1").panzoom("pan", x, y, {
       relative: false,
       animate: true
     });
@@ -117,19 +118,25 @@ $(document).ready(function() {
 
 
   $('a#mqs-ryder').on("click", function() {
-    $('div#floor1').panzoom("setMatrix", ["1.49535", "0", "0", "1.49535", "143.2", "-4.339"], {animate: true})
+    $('div#floor1').panzoom("setMatrix", ["1.49535", "0", "0", "1.49535", "143.2", "-4.339"], {
+      animate: true
+    })
     $('#myMaps').wayfinding('startpoint', 'Ryder');
     $('select#endSelect').val('Ryder').niceSelect('update');
   });
 
   $('a#mqs-pridham').on("click", function() {
-    $('div#floor1').panzoom("setMatrix",  ["1.49535", "0", "0", "1.49535", "131.2", "167.661"], {animate: true})
+    $('div#floor1').panzoom("setMatrix",   ["1.49535", "0", "0", "1.49535", "131.2", "167.661"], {
+      animate: true
+    })
     $('#myMaps').wayfinding('startpoint', 'P6');
     $('select#endSelect').val('P6').niceSelect('update');
   });
 
   $('a#mqs-gym').on("click", function() {
-    $('div#floor1').panzoom("setMatrix", ["1.49535", "0", "0", "1.49535", "-201.8", "108.661"], {animate: true})
+    $('div#floor1').panzoom("setMatrix", ["1.49535", "0", "0", "1.49535", "-201.8", "108.661"], {
+      animate: true
+    })
     $('#myMaps').wayfinding('startpoint', 'Gym');
     $('select#endSelect').val('Gym').niceSelect('update');
   });
@@ -146,7 +153,7 @@ $(document).ready(function() {
 
   $('i#zoom_out.material-icons').on("click", function() {
     $('div#floor1').panzoom('zoom', true, {
-      linearZoom: true,
+      linearZoom: false,
       increment: 0.3,
       focal: {
         clientX: (window.innerWidth / 2),
@@ -189,11 +196,17 @@ $(document).ready(function() {
   });
 
   $('a#view-github').click(function() {
-   window.location.href= 'https://github.com/007joshie/npbhs_map';
+    window.location.href = 'https://github.com/007joshie/npbhs_map';
   });
+
+  $('a#view-docs').click(function() {
+    window.location.href = 'https://007joshie.github.io/npbhs_map_docs/';
+  });
+
 
 });
 
 $(document).ready(function() {
   $('select').niceSelect();
+  $('.logo-loading').addClass('breathe')
 });

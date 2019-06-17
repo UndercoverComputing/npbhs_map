@@ -2,6 +2,7 @@
 
 @import url('https://fonts.googleapis.com/css?family=Rubik');
 @import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Karla');
 @import url('map_settings.css');
 @import url('ui_mobile.css');
 @import url('ui_small.css');
@@ -12,6 +13,7 @@
   overflow: scroll;
 }
 */
+
 
 #WayfindingStatus {
     position: fixed;
@@ -69,7 +71,6 @@
   user-select: none;
   white-space: nowrap;
   width: 12%;
-  min-width: 10em'
 }
 
 .nice-select:hover {
@@ -194,7 +195,7 @@
 .nice-select .option {
   width: 100% !important;
   cursor: pointer;
-  font-weight: 400;
+  font-weight: 600;
   line-height: 40px;
   list-style: none;
   min-height: 40px;

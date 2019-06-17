@@ -23,6 +23,7 @@
   <meta name="og:type" content="website">
   <link rel="manifest" href="/manifest.json">
   <meta name="theme-color" content="#4a80f5">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="msapplication-navbutton-color" content="#4285f4">
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="#4a80f5">
@@ -35,15 +36,13 @@
   <script src="scripts/jquery.nice-select.js"></script>
   <script src="scripts/urlquery.js"></script>
   <script src="scripts/index.js"></script>
-
-  <meta name="" content="">
 </head>
 
 <body>
   <div id="header" class="header">
     <a id="header_logo" class="logo"><i class="material-icons logo">person_pin_circle</i>NPBHS MAP</a>
     <select id="beginSelect" class="select-style" placeholder="Start">
-          <option value"" disabled selected hidden>From...</option>
+          <option disabled selected hidden>From...</option>
  					<option value="Ryder">Ryder</option>
           <option value="Gym">Gym</option>
           <option value="Library">Library</option>
@@ -58,7 +57,7 @@
           <option value="T2">T2</option>
  				</select>
     <select id="endSelect" class="select-style">
-              <option value"" disabled selected hidden>To...</option>
+              <option disabled selected hidden>To...</option>
               <option value="Toilet">Nearest Toilets</option>
     					<option value="Ryder">Ryder</option>
               <option value="Gym">Gym</option>
@@ -84,9 +83,16 @@
       <ul>
         <li><a id="force-reload">Force Reload</a></li>
         <li><a id="view-github">View on GitHub</a></li>
+        <li><a id="view-docs">View Docs</a></li>
       </ul>
     </div>
   </div>
+  <div class='fullscreenDiv'>
+    <div class="center"><a class="logo-loading">NPBHS MAP</a></div>
+</div>
+  <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
+
+
   <div id="content" style="touch-action: manipulation;">
     <div id="myMaps">
     </div>
@@ -102,6 +108,7 @@
     <a id="mqs-pridham">Pridham Hall<i class="material-icons quick-select">star_border</i></a>
     <a id="mqs-gym">Gym<i class="material-icons quick-select">star_border</i></a>
   </div>
+
 </body>
 
 </html>
