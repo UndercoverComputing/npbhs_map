@@ -3,19 +3,16 @@
 ALPHA v.9 is still avaliable to view:
 https://007joshie.github.io/npbhs_map/
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 ## Progress: 85% -- Not Actively Developing
 =======
 Supports Queries:
 https://skyris.me/?start=Gym&end=Toilet
 
 ## Progress: 85%
->>>>>>> 155ce67cc3a7cad8c99f6a3cea59b0a0a65a4362
+
 =======
 Only the proof of concept is shown. Basic single floor navigation, pan zoom functionality.
-
->>>>>>> aca48b135cfd038811232728fa04abfcdca2f254
 
 ## Planned Revisions (as of April 2019):
 * More Classrooms
